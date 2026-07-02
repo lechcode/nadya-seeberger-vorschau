@@ -31,13 +31,13 @@
   <meta property="og:image" content="https://lechcode.github.io/nadya-seeberger-vorschau/assets/og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta name="theme-color" content="#241A16" />
-  <!-- Favicon: stilisierter Phoenix-Schwung in Markenfarben, Inline-SVG, kein externer Request -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23241A16'/%3E%3Cpath d='M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z' fill='%23D9A54C'/%3E%3Ccircle cx='32' cy='24' r='4.5' fill='%23E8A15B'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#153541" />
+  <!-- Favicon: Nadyas echtes Phoenix-Logo (lokal, kein externer Request) -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <!-- Schriften lokal gehostet (DSGVO: keine Verbindung zu Google) -->
   <link rel="stylesheet" href="assets/fonts.css">
-  <!-- Hero-Bild vorladen (EIN preload mit imagesrcset — LCP-sicher) -->
-  <link rel="preload" as="image" href="assets/hero-nadya-900.jpg" imagesrcset="assets/hero-nadya-500.webp 500w, assets/hero-nadya-800.webp 800w, assets/hero-nadya-1100.webp 1100w" imagesizes="100vw" type="image/webp">
+  <!-- Hero-Porträt vorladen (EIN preload mit imagesrcset — LCP-sicher) -->
+  <link rel="preload" as="image" href="assets/hero-portrait-760.jpg" imagesrcset="assets/hero-portrait-520.webp 520w, assets/hero-portrait-760.webp 760w, assets/hero-portrait-1040.webp 1040w" imagesizes="(max-width:900px) 88vw, 440px" type="image/webp">
 
   <!-- JSON-LD: nur sichtbare, belegte Angaben. Kein AggregateRating (self-serving). Schweizer Firmensitz — Angaben rein deskriptiv, keine DE-Rechtsform behauptet. -->
   <script type="application/ld+json">
@@ -67,15 +67,20 @@
   </script>
 
   <style>
-  /* ===== 1 · TOKENS — „Phoenix": Kohle-Braun / Ember / warmes Gold ===== */
+  /* ===== 1 · TOKENS — „Phoenix": Koralle / Stahlblau auf Warm-Weiß (Markenfarben aus dem Logo) ===== */
   :root{
-    --ink:#241A16; --ink-deep:#1A120F; --ink-2:#33251F;
-    --cream:#F7F0E6; --sand:#EDE0CC; --warm-white:#FBF6EC;
-    --sage-soft:#EFE2D0;
-    --ember:#C1622E; --ember-deep:#9C4B22; --gold:#D9A54C; --gold-soft:#F0D9A8;
-    --text:#2A2019; --text-soft:#5E4F44; --text-faint:#8b7c6e;
-    --bone:#F7F0E6; --bone-dim:#d9c9b4; --bone-faint:#a8998a;
-    --line-l:rgba(42,32,25,.13); --line-d:rgba(247,240,230,.15);
+    /* dunkle Flächen = tiefes Teal-Navy (verträgt sich mit Koralle UND Blau) */
+    --ink:#153541; --ink-deep:#0F2831; --ink-2:#1E4553;
+    /* helle Flächen */
+    --cream:#FBF7F2; --sand:#F2ECE3; --warm-white:#FFFFFF;
+    --sage-soft:#FCE8DF;               /* weiches Pfirsich für Koralle-Chips/Icons */
+    --sky-soft:#E7F1F8;                /* weiches Blau für blaue Akzentflächen */
+    /* Primär-Akzent (CTA) = Koralle · Zweitfarbe (--gold wiederverwendet) = Stahlblau */
+    --ember:#E15A3C; --ember-deep:#C6482B; --gold:#4F9FCD; --gold-soft:#BFE0F2;
+    --blue:#4F9FCD; --blue-deep:#2E7FB0; --coral:#E15A3C;
+    --text:#233039; --text-soft:#556570; --text-faint:#8b98a0;
+    --bone:#EAF3F8; --bone-dim:#c4d5de; --bone-faint:#8fa6b1;
+    --line-l:rgba(30,50,60,.13); --line-d:rgba(234,243,248,.15);
     --serif:"Fraunces","Fraunces Fallback",Georgia,"Times New Roman",serif;
     --sans:"Inter","Inter Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 
@@ -97,13 +102,13 @@
     --space-5:clamp(44px, 5.5vw, 64px);
     --space-6:clamp(60px, 9vw, 116px);
 
-    --shadow-l:inset 0 1px 0 rgba(255,255,255,.6), 0 2px 6px -3px rgba(36,26,22,.18), 0 24px 48px -28px rgba(36,26,22,.32);
-    --shadow-d:0 1px 0 rgba(255,255,255,.04), 0 24px 48px -28px rgba(0,0,0,.65), 0 40px 90px -60px rgba(0,0,0,.55);
-    --edge-l:inset 0 1px 0 rgba(255,255,255,.7);
-    --glow-l:inset 0 1px 0 rgba(255,255,255,.65), 0 0 0 1px rgba(193,98,46,.24), 0 22px 46px -24px rgba(36,26,22,.36);
+    --shadow-l:inset 0 1px 0 rgba(255,255,255,.7), 0 2px 6px -3px rgba(30,50,60,.14), 0 24px 48px -28px rgba(30,50,60,.26);
+    --shadow-d:0 1px 0 rgba(255,255,255,.05), 0 24px 48px -28px rgba(0,0,0,.55), 0 40px 90px -60px rgba(0,0,0,.5);
+    --edge-l:inset 0 1px 0 rgba(255,255,255,.8);
+    --glow-l:inset 0 1px 0 rgba(255,255,255,.8), 0 0 0 1px rgba(225,90,60,.22), 0 22px 46px -24px rgba(30,50,60,.3);
     --ease:cubic-bezier(.22,.61,.36,1);
-    --focus:0 0 0 3px rgba(193,98,46,.45);
-    --focus-d:0 0 0 3px rgba(217,165,76,.55);
+    --focus:0 0 0 3px rgba(225,90,60,.45);
+    --focus-d:0 0 0 3px rgba(79,159,205,.6);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%;}
@@ -122,7 +127,7 @@
   .light{background:var(--cream);color:var(--text);}
   .sand{background:var(--sand);}
   .dark{background:var(--ink);color:var(--bone);}
-  .dark h1,.dark h2,.dark h3{color:#fbf5ea;}
+  .dark h1,.dark h2,.dark h3{color:#eef6fb;}
   .dark .sec-head p,.dark .lead{color:var(--bone-dim);}
   .light h2,.light h3,.sand h2,.sand h3{color:var(--text);}
   .sec-head p,.lead{color:var(--text-soft);}
@@ -132,8 +137,8 @@
   .dark .eyebrow{color:var(--gold-soft);} .dark .eyebrow::before{background:var(--gold);}
 
   .wm{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1;color:var(--text);}
-  .wm .phoenix{width:30px;height:30px;flex:none;}
-  .dark .wm,.site-footer .wm{color:#fbf5ea;}
+  .wm .phoenix{width:34px;height:auto;flex:none;}
+  .dark .wm,.site-footer .wm{color:#eef6fb;}
 
   .btn{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;
     background:linear-gradient(180deg,var(--ember),var(--ember-deep));color:#fff;
@@ -160,30 +165,43 @@
   .nav-toggle span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
   .nav-toggle span+span{margin-top:6px;}
 
-  /* ===== 3 · HERO ===== */
-  .hero{position:relative;isolation:isolate;min-height:min(90svh,740px);display:flex;align-items:center;
-    padding:calc(var(--nav-h) + 4vw) 0 var(--space-6);overflow:hidden;color:var(--bone);}
-  .foto .hero{min-height:auto;}
-  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;z-index:-2;}
-  .hero::after{content:"";position:absolute;inset:0;z-index:-1;
-    background:linear-gradient(180deg,rgba(26,18,15,.60),rgba(26,18,15,.5) 40%,rgba(20,14,11,.88)),radial-gradient(60vmax 50vmax at 82% 10%,rgba(193,98,46,.28),transparent 60%);}
-  .hero .wrap{position:relative;max-width:none;}
-  .hero-inner{max-width:60ch;}
-  .hero h1{font-size:var(--step-5);line-height:var(--lh-tight);letter-spacing:var(--ls-display);margin:var(--space-2) 0 0;color:#fdfbf5;max-width:16ch;}
-  .hero h1 em{font-style:italic;color:var(--gold-soft);}
-  .hero-sub{font-size:var(--step-1);line-height:var(--lh-relaxed);color:#f1e8da;margin-top:var(--space-3);max-width:52ch;}
+  /* ===== 3 · HERO — heller Split-Hero (Foto ungedimmt, Text auf Warm-Weiß) ===== */
+  .hero{position:relative;isolation:isolate;overflow:hidden;
+    padding:calc(var(--nav-h) + clamp(28px,5vw,60px)) 0 var(--space-6);
+    background:
+      radial-gradient(48vmax 40vmax at 88% 6%,rgba(79,159,205,.14),transparent 62%),
+      radial-gradient(52vmax 44vmax at 6% 96%,rgba(225,90,60,.10),transparent 60%),
+      linear-gradient(180deg,var(--warm-white),var(--cream));}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;}
+  .hero-inner{max-width:36ch;}
+  .hero h1{font-size:var(--step-5);line-height:var(--lh-tight);letter-spacing:var(--ls-display);margin:var(--space-2) 0 0;color:var(--text);max-width:15ch;}
+  .hero h1 em{font-style:italic;color:var(--coral);position:relative;}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:.14em;border-radius:3px;
+    background:linear-gradient(90deg,var(--gold),#F34C5C 45%,#FC9444);opacity:.9;}
+  .hero-sub{font-size:var(--step-1);line-height:var(--lh-relaxed);color:var(--text-soft);margin-top:var(--space-3);max-width:46ch;}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:var(--space-4);align-items:center;}
-  .hero .eyebrow{color:var(--gold-soft);}
-  .hero .eyebrow::before{background:var(--gold);box-shadow:0 0 10px 1px rgba(217,165,76,.5);}
-  .hero .btn-ghost{color:#fdfbf5;border-color:rgba(247,240,230,.5);}
-  .hero .btn-ghost:hover{background:rgba(247,240,230,.12);border-color:rgba(247,240,230,.8);}
+  .hero-tel{margin-top:18px;display:inline-flex;align-items:center;gap:9px;font-weight:600;color:var(--blue-deep);font-size:var(--step-0);}
+  /* gerahmtes Porträt rechts */
+  .hero-figure{position:relative;justify-self:center;max-width:440px;width:100%;}
+  .hero-figure .frame{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow-l);
+    outline:1px solid rgba(30,50,60,.06);aspect-ratio:4/5;background:var(--sky-soft);}
+  .hero-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block;}
+  .hero-figure .badge{position:absolute;left:-14px;bottom:22px;background:#fff;border-radius:16px;
+    padding:12px 16px 12px 14px;box-shadow:var(--shadow-l);display:flex;align-items:center;gap:11px;max-width:210px;}
+  .hero-figure .badge img{width:34px;height:auto;flex:none;}
+  .hero-figure .badge b{font-family:var(--serif);font-size:15px;color:var(--text);display:block;line-height:1.15;}
+  .hero-figure .badge span{font-size:12px;color:var(--text-faint);}
+  .hero-figure .glow{position:absolute;inset:-8% -10% -12% -8%;z-index:-1;border-radius:40px;
+    background:radial-gradient(60% 60% at 70% 20%,rgba(79,159,205,.22),transparent 70%),radial-gradient(60% 60% at 20% 90%,rgba(225,90,60,.18),transparent 70%);filter:blur(6px);}
+  .hero .eyebrow{color:var(--coral);}
+  .hero .eyebrow::before{background:linear-gradient(135deg,var(--gold),var(--coral));box-shadow:0 0 10px 1px rgba(225,90,60,.4);}
 
   /* ===== Vertrauensleiste ===== */
   .trust-bar{background:var(--ink-deep);color:var(--bone);border-top:1px solid rgba(247,240,230,.08);}
   .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:clamp(22px,3vw,30px) 0;}
   .trust-item{display:flex;gap:12px;align-items:flex-start;font-size:var(--step-0);color:var(--bone-dim);line-height:1.4;}
   .trust-item svg{flex:none;color:var(--gold);margin-top:2px;}
-  .trust-item b{color:#fbf5ea;font-weight:600;display:block;font-family:var(--serif);}
+  .trust-item b{color:#eef6fb;font-weight:600;display:block;font-family:var(--serif);}
 
   /* ===== Leistungen ===== */
   .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
@@ -199,7 +217,7 @@
   .about-portrait{position:relative;max-width:360px;}
   .about-portrait picture{display:block;}
   .about-portrait img{display:block;width:100%;height:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-l);aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;}
-  .about-portrait .deco{position:absolute;right:-14px;bottom:-14px;width:78px;color:var(--gold);opacity:.95;background:var(--cream);border-radius:50%;padding:12px;box-shadow:var(--shadow-l);}
+  .about-portrait .deco{position:absolute;right:-14px;bottom:-14px;width:78px;height:auto;background:#fff;border-radius:50%;padding:13px;box-shadow:var(--shadow-l);}
   .about-body .lead{font-size:var(--step-1);color:var(--text-soft);}
   .quote{font-family:var(--serif);font-style:italic;font-size:var(--step-3);line-height:1.32;color:var(--ember-deep);margin:var(--space-4) 0;padding-left:22px;border-left:3px solid var(--gold);text-wrap:balance;}
   .sign{display:flex;align-items:center;gap:14px;margin-top:var(--space-3);}
@@ -246,10 +264,11 @@
 
   /* ===== Stimmen ===== */
   .voices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .voice{background:var(--ink);color:var(--bone);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow-d);}
-  .voice .stars{color:var(--gold);font-size:15px;letter-spacing:2px;margin-bottom:12px;}
-  .voice p{font-style:italic;font-family:var(--serif);font-size:var(--step-1);line-height:1.5;color:#f1e8da;}
-  .voice .who{margin-top:16px;font-size:13.5px;color:var(--bone-faint);}
+  .voice{background:var(--warm-white);color:var(--text);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--edge-l),var(--shadow-l);border:1px solid var(--line-l);position:relative;}
+  .voice::before{content:"\201C";position:absolute;top:10px;right:20px;font-family:var(--serif);font-size:64px;line-height:1;color:var(--coral);opacity:.18;}
+  .voice .stars{color:var(--blue);font-size:15px;letter-spacing:2px;margin-bottom:12px;}
+  .voice p{font-style:italic;font-family:var(--serif);font-size:var(--step-1);line-height:1.5;color:var(--text);}
+  .voice .who{margin-top:16px;font-size:13.5px;color:var(--text-faint);font-weight:600;}
 
   /* ===== FAQ ===== */
   .faq{max-width:800px;}
@@ -286,12 +305,12 @@
 
   /* ===== Anfahrt ===== */
   .anfahrt-card{background:radial-gradient(120% 150% at 0% 0%,var(--ink-2),var(--ink) 65%);color:var(--bone);border-radius:var(--radius-lg);padding:clamp(28px,4.5vw,52px);box-shadow:var(--shadow-d);position:relative;overflow:hidden;}
-  .anfahrt-card h2{color:#fbf5ea;font-size:var(--step-3);}
+  .anfahrt-card h2{color:#eef6fb;font-size:var(--step-3);}
   .anfahrt-card p{color:var(--bone-dim);margin-top:14px;max-width:60ch;}
   .anfahrt-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:var(--space-4);}
   .anfahrt-item{background:rgba(247,240,230,.06);border:1px solid rgba(247,240,230,.14);border-radius:var(--radius-sm);padding:18px 20px;}
   .anfahrt-item .lbl2{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-soft);margin-bottom:6px;}
-  .anfahrt-item .v{font-size:15px;color:#f1e8da;}
+  .anfahrt-item .v{font-size:15px;color:#dbe8f0;}
   .maplink{display:inline-flex;align-items:center;gap:8px;margin-top:var(--space-4);color:var(--gold-soft);font-weight:600;font-size:14.5px;}
   .maplink:hover{color:#fff;}
 
@@ -304,13 +323,13 @@
   .foot-brand .addr{font-size:13.5px;color:var(--bone-faint);margin-top:14px;line-height:1.8;}
   .foot-col h3{font-family:var(--serif);font-size:14px;letter-spacing:.02em;color:var(--gold-soft);font-weight:600;margin-bottom:14px;}
   .foot-col a{display:block;color:var(--bone-dim);padding:5px 0;transition:color .2s var(--ease);font-size:14.5px;}
-  .foot-col a:hover{color:#fbf5ea;}
+  .foot-col a:hover{color:#eef6fb;}
   .foot-bottom{margin-top:clamp(32px,5vw,48px);padding-top:22px;border-top:1px solid rgba(247,240,230,.14);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--bone-faint);}
   .foot-bottom .hand{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold-soft);}
 
   /* ===== Sticky Mobil-Kontaktleiste ===== */
   .mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;display:none;grid-template-columns:1fr 1fr 1fr;
-    background:rgba(26,18,15,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(247,240,230,.16);box-shadow:0 -10px 30px -12px rgba(0,0,0,.5);}
+    background:rgba(15,40,49,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(234,243,248,.16);box-shadow:0 -10px 30px -12px rgba(0,0,0,.5);}
   .mobile-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:9px 4px;color:var(--bone);font-size:11.5px;font-weight:600;min-height:58px;}
   .mobile-bar a+a{border-left:1px solid rgba(247,240,230,.14);}
   .mobile-bar a svg{flex:none;}
@@ -339,6 +358,9 @@
     .nav-links.open{transform:none;opacity:1;pointer-events:auto;}
     .nav-links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line-l);} .nav-links a:not(.btn)::after{display:none;}
     .nav-links .btn{margin-top:14px;justify-content:center;} .nav-toggle{display:block;}
+    .hero-grid{grid-template-columns:1fr;gap:clamp(26px,6vw,40px);}
+    .hero-inner{max-width:none;} .hero h1{max-width:18ch;}
+    .hero-figure{order:-1;max-width:340px;}
     .about-grid,.contact-grid,.anfahrt-grid{grid-template-columns:1fr;}
     .about-portrait{max-width:280px;margin-inline:auto;}
     .trust-grid{grid-template-columns:1fr 1fr;}
@@ -386,10 +408,7 @@
   <header class="nav">
     <nav class="wrap nav-in" aria-label="Hauptnavigation">
       <a class="wm" href="#top" aria-label="Nadya Seeberger — Startseite">
-        <svg class="phoenix" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-          <path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="currentColor"/>
-          <circle cx="32" cy="24" r="4.5" fill="#E8A15B"/>
-        </svg>
+        <img class="phoenix" src="assets/logo-phoenix-96.png" width="34" height="37" alt="" aria-hidden="true">
         <span>Nadya&nbsp;Seeberger</span>
       </a>
       <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
@@ -409,24 +428,35 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero">
-      <picture>
-        <source type="image/webp" srcset="assets/hero-nadya-500.webp 500w, assets/hero-nadya-800.webp 800w, assets/hero-nadya-1100.webp 1100w" sizes="100vw">
-        <img class="hero-img" src="assets/hero-nadya-900.jpg" srcset="assets/hero-nadya-480.jpg 480w, assets/hero-nadya-800.jpg 800w, assets/hero-nadya-900.jpg 900w" sizes="100vw" width="1100" height="1649" alt="Nadya Seeberger, lächelnd, Gründerin ihrer Praxis für Hypnose, Breathwork und Coaching in Biel" fetchpriority="high">
-      </picture>
       <div class="wrap">
-        <div class="hero-inner">
-          <span class="eyebrow">Hypnose · Breathwork · Coaching · Biel &amp; online</span>
-          <h1>Wandel beginnt mit <em>einem Atemzug.</em></h1>
-          <p class="hero-sub">Ich begleite dich mit Hypnose, Breathwork und herzzentriertem Coaching durch Umbruchphasen — einfühlsam, erfahren, seit 19 Jahren. Live in Biel oder bequem online.</p>
-          <div class="hero-cta">
-            <a class="btn" href="#kontakt">Kostenfreies Erstgespräch <span class="arr">→</span></a>
-            <a class="btn btn-ghost" href="#leistungen">Angebote ansehen</a>
+        <div class="hero-grid">
+          <div class="hero-inner">
+            <span class="eyebrow">Hypnose · Breathwork · Coaching · Biel &amp; online</span>
+            <h1>Wandel beginnt mit <em>einem Atemzug.</em></h1>
+            <p class="hero-sub">Ich begleite dich mit Hypnose, Breathwork und herzzentriertem Coaching durch Umbruchphasen — einfühlsam, erfahren, seit 19 Jahren. Live in Biel oder bequem online.</p>
+            <div class="hero-cta">
+              <a class="btn" href="#kontakt">Kostenfreies Erstgespräch <span class="arr">→</span></a>
+              <a class="btn btn-ghost" href="#leistungen">Angebote ansehen</a>
+            </div>
+            <!-- HIER: Telefonnummer -->
+            <a class="hero-tel" href="tel:+41793683553">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +41 79 368 35 53
+            </a>
           </div>
-          <!-- HIER: Telefonnummer -->
-          <a class="hero-tel" href="tel:+41793683553" style="margin-top:18px;display:inline-flex;align-items:center;gap:9px;font-weight:600;color:#fdfbf5;font-size:var(--step-0);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +41 79 368 35 53
-          </a>
+          <div class="hero-figure">
+            <span class="glow" aria-hidden="true"></span>
+            <div class="frame">
+              <picture>
+                <source type="image/webp" srcset="assets/hero-portrait-520.webp 520w, assets/hero-portrait-760.webp 760w, assets/hero-portrait-1040.webp 1040w" sizes="(max-width:900px) 88vw, 440px">
+                <img src="assets/hero-portrait-760.jpg" srcset="assets/hero-portrait-520.jpg 520w, assets/hero-portrait-760.jpg 760w, assets/hero-portrait-1040.jpg 1040w" sizes="(max-width:900px) 88vw, 440px" width="1200" height="1500" alt="Nadya Seeberger, lächelnd — Gründerin ihrer Praxis für Hypnose, Breathwork und Coaching in Biel" fetchpriority="high">
+              </picture>
+            </div>
+            <div class="badge">
+              <img src="assets/logo-phoenix-96.png" width="34" alt="" aria-hidden="true">
+              <span><b>Shift Today</b>Deine Reise beginnt hier</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -488,7 +518,7 @@
             <picture>
               <source type="image/webp" srcset="assets/portrait-ueber-mich-260.webp 260w, assets/portrait-ueber-mich-400.webp 400w, assets/portrait-ueber-mich-560.webp 560w" sizes="(max-width:600px) 210px, (max-width:920px) 280px, 34vw">
               <img src="assets/portrait-ueber-mich-400.jpg" srcset="assets/portrait-ueber-mich-260.jpg 260w, assets/portrait-ueber-mich-400.jpg 400w, assets/portrait-ueber-mich-560.jpg 560w" sizes="(max-width:600px) 210px, (max-width:920px) 280px, 34vw" width="560" height="682" alt="Nadya Seeberger, Nahaufnahme, lächelnd" loading="lazy" decoding="async">
-              <svg class="deco" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="currentColor"/></svg>
+              <img class="deco" src="assets/logo-phoenix-140.png" width="78" alt="" aria-hidden="true">
             </picture>
           </div>
           <div class="about-body">
@@ -506,7 +536,7 @@
               <span>Mental Coach Berufskarriere</span>
             </div>
             <div class="sign">
-              <span class="wm" style="font-size:20px;"><svg width="30" height="30" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="var(--ember)"/></svg></span>
+              <span class="wm" style="font-size:20px;"><img class="phoenix" src="assets/logo-phoenix-96.png" width="32" alt="" aria-hidden="true"></span>
               <span><span class="name">Nadya Seeberger</span><br><span class="role">Hypnose · Breathwork · Coaching · Biel</span></span>
             </div>
           </div>
@@ -749,7 +779,7 @@
     <div class="wrap">
       <div class="foot-top">
         <div class="foot-brand">
-          <span class="wm"><svg class="phoenix" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="currentColor"/></svg><span>Nadya Seeberger</span></span>
+          <span class="wm"><img class="phoenix" src="assets/logo-phoenix-96.png" width="34" alt="" aria-hidden="true"><span>Nadya Seeberger</span></span>
           <p class="tag">Wandel beginnt mit einem Atemzug.</p>
           <p class="addr">Nadya Seeberger · Unterer Quai 31, 2502 Biel/Bienne<br>shift@nadya-seeberger.com · +41 79 368 35 53</p>
         </div>

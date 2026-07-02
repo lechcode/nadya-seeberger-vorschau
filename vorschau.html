@@ -16,17 +16,17 @@
   <meta property="og:image" content="https://lechcode.github.io/nadya-seeberger-vorschau/assets/og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta name="theme-color" content="#241A16" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23241A16'/%3E%3Cpath d='M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z' fill='%23D9A54C'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#153541" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="assets/fonts.css">
   <style>
   :root{
-    --ink:#241A16; --ink-deep:#1A120F; --ink-2:#33251F;
-    --cream:#F7F0E6; --sand:#EDE0CC; --warm-white:#FBF6EC; --sage-soft:#EFE2D0;
-    --ember:#C1622E; --ember-deep:#9C4B22; --gold:#D9A54C; --gold-soft:#F0D9A8;
-    --text:#2A2019; --text-soft:#5E4F44; --text-faint:#8b7c6e;
-    --bone:#F7F0E6; --bone-dim:#d9c9b4; --bone-faint:#a8998a;
-    --line-l:rgba(42,32,25,.13); --line-d:rgba(247,240,230,.15);
+    --ink:#153541; --ink-deep:#0F2831; --ink-2:#1E4553;
+    --cream:#FBF7F2; --sand:#F2ECE3; --warm-white:#FFFFFF; --sage-soft:#FCE8DF;
+    --ember:#E15A3C; --ember-deep:#C6482B; --gold:#4F9FCD; --gold-soft:#BFE0F2;
+    --text:#233039; --text-soft:#556570; --text-faint:#8b98a0;
+    --bone:#EAF3F8; --bone-dim:#c4d5de; --bone-faint:#8fa6b1;
+    --line-l:rgba(30,50,60,.13); --line-d:rgba(247,240,230,.15);
     --serif:"Fraunces","Fraunces Fallback",Georgia,serif;
     --sans:"Inter","Inter Fallback",-apple-system,Arial,sans-serif;
     --radius:18px; --radius-lg:24px; --radius-sm:11px; --radius-pill:999px;
@@ -53,17 +53,17 @@
 
   /* Hero */
   .hero{background:radial-gradient(120% 110% at 50% -10%,var(--ink-2),var(--ink-deep) 70%);color:var(--bone);text-align:center;padding:clamp(56px,9vw,104px) 0 clamp(48px,7vw,84px);}
-  .hero h1{font-size:var(--s5);color:#fdfbf5;max-width:20ch;margin:0 auto;}
+  .hero h1{font-size:var(--s5);color:#f4f9fc;max-width:20ch;margin:0 auto;}
   .hero p{font-size:var(--s1);color:var(--bone-dim);max-width:56ch;margin:22px auto 0;line-height:1.7;}
   .hero .cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
   .hero .ghost{background:transparent;border:1.5px solid rgba(247,240,230,.3);color:var(--bone);box-shadow:none;}
-  .gift{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--gold-soft);background:rgba(217,165,76,.16);border:1px solid rgba(217,165,76,.35);padding:7px 15px;border-radius:var(--radius-pill);margin-bottom:24px;}
+  .gift{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--gold-soft);background:rgba(79,159,205,.16);border:1px solid rgba(79,159,205,.38);padding:7px 15px;border-radius:var(--radius-pill);margin-bottom:24px;}
 
   .sec-head{text-align:center;max-width:60ch;margin:0 auto clamp(28px,4vw,44px);}
   .sec-head h2{font-size:var(--s4);}
   .sec-head p{font-size:var(--s1);color:var(--text-soft);margin-top:14px;line-height:1.7;}
   .dark{background:var(--ink-deep);color:var(--bone);}
-  .dark h2{color:#fdfbf5;} .dark .sec-head p{color:var(--bone-dim);}
+  .dark h2{color:#f4f9fc;} .dark .sec-head p{color:var(--bone-dim);}
   .sand{background:var(--sand);}
 
   /* Before/After Slider */
@@ -80,14 +80,14 @@
 
   /* Tacho */
   .tacho{text-align:center;}
-  .tacho .big{font-family:var(--serif);font-weight:600;font-size:clamp(44px,9vw,86px);color:#fdfbf5;line-height:1;letter-spacing:-.02em;}
+  .tacho .big{font-family:var(--serif);font-weight:600;font-size:clamp(44px,9vw,86px);color:#f4f9fc;line-height:1;letter-spacing:-.02em;}
   .tacho .big .old{color:var(--bone-faint);text-decoration:line-through;text-decoration-thickness:3px;}
   .tacho .big .new{color:var(--gold-soft);}
   .tacho .big .arrow{color:var(--gold);margin:0 .15em;}
   .tacho p{color:var(--bone-dim);font-size:var(--s1);max-width:54ch;margin:22px auto 0;line-height:1.7;}
   .mini-stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px;}
   .mini{background:rgba(247,240,230,.07);border:1px solid var(--line-d);border-radius:var(--radius);padding:18px 22px;min-width:150px;}
-  .mini .n{font-family:var(--serif);font-size:28px;color:#fdfbf5;font-weight:600;}
+  .mini .n{font-family:var(--serif);font-size:28px;color:#f4f9fc;font-weight:600;}
   .mini .l{font-size:13px;color:var(--bone-faint);margin-top:4px;}
 
   /* Phones */
@@ -108,7 +108,7 @@
   .dark .card{background:rgba(247,240,230,.05);border-color:var(--line-d);}
   .card .ic{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:12px;background:var(--sage-soft);color:var(--ember-deep);font-size:22px;margin-bottom:14px;}
   .dark .card .ic{background:rgba(217,165,76,.18);color:var(--gold-soft);}
-  .card h3{font-size:var(--s2);margin-bottom:8px;} .dark .card h3{color:#fdfbf5;}
+  .card h3{font-size:var(--s2);margin-bottom:8px;} .dark .card h3{color:#f4f9fc;}
   .card p{font-size:15px;color:var(--text-soft);} .dark .card p{color:var(--bone-dim);}
   .card .free{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ember);}
 
@@ -138,7 +138,7 @@
   .steps3 .st b{display:block;font-family:var(--serif);font-size:16px;margin-bottom:4px;color:var(--ember-deep);}
 
   footer{background:var(--ink-deep);color:var(--bone-dim);text-align:center;padding:clamp(40px,6vw,64px) 0;}
-  footer .phoenix{width:40px;height:40px;margin:0 auto 16px;}
+  footer .phoenix{width:44px;height:auto;margin:0 auto 16px;}
   footer p{font-size:14.5px;max-width:60ch;margin:0 auto;line-height:1.7;}
   footer .soft{color:var(--bone-faint);font-size:13px;margin-top:16px;}
   footer a{color:var(--gold-soft);font-weight:600;}
@@ -180,7 +180,7 @@
         <span class="ba-lbl neu">Neu</span>
         <div class="ba-div" id="baDiv">
           <button class="ba-knob" id="baKnob" type="button" aria-label="Vergleichsregler — mit Pfeiltasten verschiebbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" role="slider">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C1622E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E15A3C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg>
           </button>
         </div>
       </div>
@@ -265,10 +265,10 @@
         <h2>Das ist beim Bauen gleich mit aufgefallen.</h2>
       </div>
       <div class="fixed">
-        <div class="row"><span class="check"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#241A16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Zwei Popups gleichzeitig entfernt</h3><p>Deine Seite zeigt beim Öffnen ein Cookie-Banner UND ein Event-Popup übereinander. Die neue Seite ist sofort lesbar, ganz ohne Cookie-Hinweis nötig.</p></div></div>
-        <div class="row"><span class="check"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#241A16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Ein toter Link gefunden</h3><p>Die Unterseite „/hypnobirthing/" ist auf deiner Seite intern verlinkt, führt aber ins Leere (404). Kleine Sache, aber sammelt sich.</p></div></div>
-        <div class="row"><span class="check"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#241A16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Deine Fotos in Szene gesetzt</h3><p>Dein Porträt und deine Praxis- und Retreat-Fotos sind deine größte Stärke — jetzt groß, scharf und schnell statt zwischen Stock-Bildern versteckt.</p></div></div>
-        <div class="row"><span class="check"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#241A16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Alle Preise an einem Ort</h3><p>Deine CHF-Preise waren über mehrere Unterseiten verteilt — jetzt findet man sie auf einen Blick, übersichtlich sortiert.</p></div></div>
+        <div class="row"><span class="check"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#153541" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Zwei Popups gleichzeitig entfernt</h3><p>Deine Seite zeigt beim Öffnen ein Cookie-Banner UND ein Event-Popup übereinander. Die neue Seite ist sofort lesbar, ganz ohne Cookie-Hinweis nötig.</p></div></div>
+        <div class="row"><span class="check"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#153541" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Ein toter Link gefunden</h3><p>Die Unterseite „/hypnobirthing/" ist auf deiner Seite intern verlinkt, führt aber ins Leere (404). Kleine Sache, aber sammelt sich.</p></div></div>
+        <div class="row"><span class="check"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#153541" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Deine Fotos in Szene gesetzt</h3><p>Dein Porträt und deine Praxis- und Retreat-Fotos sind deine größte Stärke — jetzt groß, scharf und schnell statt zwischen Stock-Bildern versteckt.</p></div></div>
+        <div class="row"><span class="check"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#153541" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Alle Preise an einem Ort</h3><p>Deine CHF-Preise waren über mehrere Unterseiten verteilt — jetzt findet man sie auf einen Blick, übersichtlich sortiert.</p></div></div>
       </div>
     </div>
   </section>
@@ -301,9 +301,9 @@
       <div class="price">
         <div class="amount">500 €<small>einmalig — komplette Website inklusive Umzug</small></div>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#C1622E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Kein Abo-Zwang.</b> Die 500 € sind einmalig. Die optionale Pflege (19 €/Monat) ist monatlich kündbar.</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#C1622E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Umzug inklusive</b> — wir bringen alles live, deine E-Mail-Adresse bleibt dabei unangetastet.</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#C1622E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Kein Muss.</b> Diese Seite ist als Geschenk entstanden — das Startangebot ist einfach da, falls du magst.</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#E15A3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Kein Abo-Zwang.</b> Die 500 € sind einmalig. Die optionale Pflege (19 €/Monat) ist monatlich kündbar.</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#E15A3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Umzug inklusive</b> — wir bringen alles live, deine E-Mail-Adresse bleibt dabei unangetastet.</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#E15A3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Kein Muss.</b> Diese Seite ist als Geschenk entstanden — das Startangebot ist einfach da, falls du magst.</span></li>
         </ul>
         <div class="steps3">
           <div class="st"><b>1. Gespräch</b>30 Minuten mit Michael — ihr geht die Seite durch, du sagst, was anders soll.</div>
@@ -355,8 +355,8 @@
   <!-- 9 · FOOTER -->
   <footer>
     <div class="narrow">
-      <svg class="phoenix" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="#D9A54C"/></svg>
-      <p><b style="color:#fdfbf5;">Unverbindliche Design-Vorschau</b> — erstellt mit Sorgfalt von Lechcode aus Landsberg am Lech. Diese Seite ist privat und nicht bei Google gelistet.</p>
+      <img class="phoenix" src="assets/logo-phoenix-140.png" width="60" alt="" aria-hidden="true">
+      <p><b style="color:#eef6fb;">Unverbindliche Design-Vorschau</b> — erstellt mit Sorgfalt von Lechcode aus Landsberg am Lech. Diese Seite ist privat und nicht bei Google gelistet.</p>
       <p class="soft">Fragen? Schreib uns: <a href="mailto:info@lechcode.de">info@lechcode.de</a> · Lenny &amp; Michael · lechcode.de</p>
     </div>
   </footer>
