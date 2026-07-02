@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  NADYA SEEBERGER · Hypnose · Breathwork · Coaching · Biel (CH)    ║
+  ║  Lechcode-DEMO (unbeauftragt) · Nadya weiß NICHTS von dieser Seite ║
+  ║  Single-File, kein Build. Stil: „Phoenix" — warmes Ember/Gold auf  ║
+  ║  tiefem Kohle-Braun, ruhig und edel.                               ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  ⚠ DEMO — noindex aktiv. Texte NEU geschrieben aus INVENTAR.md    ║
+  ║    (keine Formulierungen der Altseite übernommen). Nur Preise/     ║
+  ║    Fakten aus INVENTAR.md, nichts erfunden. Rechtsseiten =         ║
+  ║    Platzhalter. Kundin sitzt in der Schweiz (Biel) — Recht daher   ║
+  ║    ohnehin nur Platzhalter, s. OFFENE-FRAGEN.md.                   ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto');</script>
+  <!-- ENTFERNEN sobald Impressum+Datenschutz live & vom Kunden freigegeben (auf ALLEN Seiten gleichzeitig) -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Hypnose, Breathwork &amp; Coaching in Biel | Nadya Seeberger</title>
+  <meta name="description" content="Nadya Seeberger begleitet dich in Biel und online mit Hypnose, Breathwork und herzzentriertem Coaching durch Umbruchphasen — einfühlsam, erfahren, seit 19 Jahren. Jetzt kostenfreies Erstgespräch sichern." />
+  <meta property="og:title" content="Nadya Seeberger – Hypnose, Breathwork &amp; Coaching in Biel" />
+  <meta property="og:description" content="Wandel beginnt mit einem Atemzug: Hypnose, Breathwork und herzzentriertes Coaching bei Nadya Seeberger — live in Biel oder online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_CH" />
+  <!-- DEMO: OG zeigt auf die Vorschau-URL, damit WhatsApp-/Social-Previews laden. Bei Go-Live auf echte Domain umstellen. -->
+  <meta property="og:url" content="https://lechcode.github.io/nadya-seeberger-vorschau/" />
+  <meta property="og:image" content="https://lechcode.github.io/nadya-seeberger-vorschau/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="theme-color" content="#241A16" />
+  <!-- Favicon: stilisierter Phoenix-Schwung in Markenfarben, Inline-SVG, kein externer Request -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23241A16'/%3E%3Cpath d='M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z' fill='%23D9A54C'/%3E%3Ccircle cx='32' cy='24' r='4.5' fill='%23E8A15B'/%3E%3C/svg%3E" />
+  <!-- Schriften lokal gehostet (DSGVO: keine Verbindung zu Google) -->
+  <link rel="stylesheet" href="assets/fonts.css">
+  <!-- Hero-Bild vorladen (EIN preload mit imagesrcset — LCP-sicher) -->
+  <link rel="preload" as="image" href="assets/hero-nadya-900.jpg" imagesrcset="assets/hero-nadya-500.webp 500w, assets/hero-nadya-800.webp 800w, assets/hero-nadya-1100.webp 1100w" imagesizes="100vw" type="image/webp">
+
+  <!-- JSON-LD: nur sichtbare, belegte Angaben. Kein AggregateRating (self-serving). Schweizer Firmensitz — Angaben rein deskriptiv, keine DE-Rechtsform behauptet. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nadya Seeberger",
+    "description": "Hypnosetherapie, Breathwork/Atemreisen und herzzentriertes Coaching in Biel/Bienne, Schweiz — live vor Ort oder online.",
+    "url": "https://nadya-seeberger.com/",
+    "image": "https://lechcode.github.io/nadya-seeberger-vorschau/assets/og.jpg",
+    "telephone": "+41 79 368 35 53",
+    "priceRange": "CHF 120–685",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Unterer Quai 31",
+      "postalCode": "2502",
+      "addressLocality": "Biel/Bienne",
+      "addressCountry": "CH"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Biel/Bienne" },
+      { "@type": "Country", "name": "Schweiz" }
+    ],
+    "knowsAbout": ["Hypnosetherapie","RTT","Breathwork","Atemreisen","Herzzentriertes Coaching","HypnoBirthing"],
+    "sameAs": ["https://www.instagram.com/nadya_seeberger"]
+  }
+  </script>
+
+  <style>
+  /* ===== 1 · TOKENS — „Phoenix": Kohle-Braun / Ember / warmes Gold ===== */
+  :root{
+    --ink:#241A16; --ink-deep:#1A120F; --ink-2:#33251F;
+    --cream:#F7F0E6; --sand:#EDE0CC; --warm-white:#FBF6EC;
+    --sage-soft:#EFE2D0;
+    --ember:#C1622E; --ember-deep:#9C4B22; --gold:#D9A54C; --gold-soft:#F0D9A8;
+    --text:#2A2019; --text-soft:#5E4F44; --text-faint:#8b7c6e;
+    --bone:#F7F0E6; --bone-dim:#d9c9b4; --bone-faint:#a8998a;
+    --line-l:rgba(42,32,25,.13); --line-d:rgba(247,240,230,.15);
+    --serif:"Fraunces","Fraunces Fallback",Georgia,"Times New Roman",serif;
+    --sans:"Inter","Inter Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+
+    --radius:18px; --radius-lg:24px; --radius-sm:11px; --radius-pill:999px;
+    --nav-h:68px;
+
+    --step--1:clamp(13px, .35vw + 12.2px, 14px);
+    --step-0:clamp(16px, .4vw + 15px, 17px);
+    --step-1:clamp(18px, .6vw + 16.5px, 20px);
+    --step-2:clamp(21px, 1.1vw + 18px, 25px);
+    --step-3:clamp(25px, 2vw + 19px, 33px);
+    --step-4:clamp(30px, 3.4vw + 18px, 47px);
+    --step-5:clamp(33px, 5.4vw + 14px, 66px);
+    --lh-tight:1.08; --lh-snug:1.16; --lh-body:1.62; --lh-relaxed:1.72;
+    --ls-display:-.02em; --ls-h2:-.014em; --ls-label:.14em;
+    --space-2:clamp(14px, 1.6vw, 18px);
+    --space-3:clamp(20px, 2.4vw, 26px);
+    --space-4:clamp(30px, 3.6vw, 40px);
+    --space-5:clamp(44px, 5.5vw, 64px);
+    --space-6:clamp(60px, 9vw, 116px);
+
+    --shadow-l:inset 0 1px 0 rgba(255,255,255,.6), 0 2px 6px -3px rgba(36,26,22,.18), 0 24px 48px -28px rgba(36,26,22,.32);
+    --shadow-d:0 1px 0 rgba(255,255,255,.04), 0 24px 48px -28px rgba(0,0,0,.65), 0 40px 90px -60px rgba(0,0,0,.55);
+    --edge-l:inset 0 1px 0 rgba(255,255,255,.7);
+    --glow-l:inset 0 1px 0 rgba(255,255,255,.65), 0 0 0 1px rgba(193,98,46,.24), 0 22px 46px -24px rgba(36,26,22,.36);
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --focus:0 0 0 3px rgba(193,98,46,.45);
+    --focus-d:0 0 0 3px rgba(217,165,76,.55);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%;}
+  body{background:var(--cream);color:var(--text);font-family:var(--sans);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;overflow-x:clip;}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:var(--lh-snug);letter-spacing:var(--ls-h2);text-wrap:balance;}
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  ::selection{background:rgba(193,98,46,.22);}
+  .wrap{width:min(1120px,92vw);margin-inline:auto;}
+  section{padding:var(--space-6) 0;position:relative;}
+  .sec-head{max-width:58ch;margin-bottom:var(--space-5);}
+  .sec-head h2{font-size:var(--step-4);margin-top:var(--space-2);}
+  .sec-head p{font-size:var(--step-1);margin-top:var(--space-3);line-height:var(--lh-relaxed);}
+  .center{text-align:center;margin-inline:auto;}
+
+  .light{background:var(--cream);color:var(--text);}
+  .sand{background:var(--sand);}
+  .dark{background:var(--ink);color:var(--bone);}
+  .dark h1,.dark h2,.dark h3{color:#fbf5ea;}
+  .dark .sec-head p,.dark .lead{color:var(--bone-dim);}
+  .light h2,.light h3,.sand h2,.sand h3{color:var(--text);}
+  .sec-head p,.lead{color:var(--text-soft);}
+
+  .eyebrow{font-family:var(--sans);font-weight:600;font-size:var(--step--1);letter-spacing:var(--ls-label);text-transform:uppercase;display:inline-flex;align-items:center;gap:9px;color:var(--ember);}
+  .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none;}
+  .dark .eyebrow{color:var(--gold-soft);} .dark .eyebrow::before{background:var(--gold);}
+
+  .wm{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1;color:var(--text);}
+  .wm .phoenix{width:30px;height:30px;flex:none;}
+  .dark .wm,.site-footer .wm{color:#fbf5ea;}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;
+    background:linear-gradient(180deg,var(--ember),var(--ember-deep));color:#fff;
+    font-family:var(--sans);font-weight:650;font-size:15.5px;padding:14px 24px;border-radius:var(--radius-pill);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 16px 28px -14px rgba(156,75,34,.6);
+    transition:transform .28s var(--ease),box-shadow .28s var(--ease);white-space:nowrap;}
+  .btn:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 22px 38px -16px rgba(156,75,34,.7);}
+  .btn:active{transform:translateY(0);transition-duration:.08s;}
+  .btn .arr{transition:transform .25s var(--ease);} .btn:hover .arr{transform:translateX(4px);}
+  .btn-ghost{background:transparent;color:var(--text);border:1.5px solid var(--line-l);box-shadow:none;font-weight:600;}
+  .btn-ghost:hover{background:rgba(36,26,22,.06);border-color:rgba(36,26,22,.4);box-shadow:none;transform:translateY(-2px);}
+  .dark .btn-ghost{color:var(--bone);border-color:rgba(247,240,230,.3);}
+  .dark .btn-ghost:hover{background:rgba(247,240,230,.08);border-color:rgba(247,240,230,.55);}
+
+  /* ===== 2 · NAV ===== */
+  .nav{position:sticky;top:0;z-index:100;height:var(--nav-h);background:rgba(247,240,230,.84);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--line-l);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:100%;}
+  .nav .wm{font-size:19px;}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a:not(.btn){font-size:14.5px;color:var(--text-soft);font-weight:500;position:relative;padding:4px 0;transition:color .2s var(--ease);}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-1px;width:0;height:2px;background:var(--ember);border-radius:2px;transition:width .25s var(--ease);}
+  .nav-links a:not(.btn):hover{color:var(--text);} .nav-links a:not(.btn):hover::after{width:100%;}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+  .nav-toggle span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
+  .nav-toggle span+span{margin-top:6px;}
+
+  /* ===== 3 · HERO ===== */
+  .hero{position:relative;isolation:isolate;min-height:min(90svh,740px);display:flex;align-items:center;
+    padding:calc(var(--nav-h) + 4vw) 0 var(--space-6);overflow:hidden;color:var(--bone);}
+  .foto .hero{min-height:auto;}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;z-index:-2;}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(26,18,15,.60),rgba(26,18,15,.5) 40%,rgba(20,14,11,.88)),radial-gradient(60vmax 50vmax at 82% 10%,rgba(193,98,46,.28),transparent 60%);}
+  .hero .wrap{position:relative;max-width:none;}
+  .hero-inner{max-width:60ch;}
+  .hero h1{font-size:var(--step-5);line-height:var(--lh-tight);letter-spacing:var(--ls-display);margin:var(--space-2) 0 0;color:#fdfbf5;max-width:16ch;}
+  .hero h1 em{font-style:italic;color:var(--gold-soft);}
+  .hero-sub{font-size:var(--step-1);line-height:var(--lh-relaxed);color:#f1e8da;margin-top:var(--space-3);max-width:52ch;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:var(--space-4);align-items:center;}
+  .hero .eyebrow{color:var(--gold-soft);}
+  .hero .eyebrow::before{background:var(--gold);box-shadow:0 0 10px 1px rgba(217,165,76,.5);}
+  .hero .btn-ghost{color:#fdfbf5;border-color:rgba(247,240,230,.5);}
+  .hero .btn-ghost:hover{background:rgba(247,240,230,.12);border-color:rgba(247,240,230,.8);}
+
+  /* ===== Vertrauensleiste ===== */
+  .trust-bar{background:var(--ink-deep);color:var(--bone);border-top:1px solid rgba(247,240,230,.08);}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:clamp(22px,3vw,30px) 0;}
+  .trust-item{display:flex;gap:12px;align-items:flex-start;font-size:var(--step-0);color:var(--bone-dim);line-height:1.4;}
+  .trust-item svg{flex:none;color:var(--gold);margin-top:2px;}
+  .trust-item b{color:#fbf5ea;font-weight:600;display:block;font-family:var(--serif);}
+
+  /* ===== Leistungen ===== */
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .svc{background:var(--warm-white);border:1px solid var(--line-l);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--edge-l), var(--shadow-l);transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease);}
+  .svc:hover{transform:translateY(-3px);box-shadow:var(--glow-l);border-color:rgba(193,98,46,.3);}
+  .svc .ic{display:inline-grid;place-items:center;width:50px;height:50px;border-radius:14px;background:var(--sage-soft);color:var(--ember-deep);margin-bottom:16px;box-shadow:inset 0 0 0 1px rgba(36,26,22,.1);}
+  .svc h3{font-size:var(--step-2);margin-bottom:8px;color:var(--text);}
+  .svc p{font-size:var(--step-0);color:var(--text-soft);}
+  .svc .method{display:block;margin-top:10px;font-size:13px;color:var(--ember-deep);font-weight:600;letter-spacing:.01em;}
+
+  /* ===== Über mich ===== */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,60px);align-items:center;}
+  .about-portrait{position:relative;max-width:360px;}
+  .about-portrait picture{display:block;}
+  .about-portrait img{display:block;width:100%;height:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-l);aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;}
+  .about-portrait .deco{position:absolute;right:-14px;bottom:-14px;width:78px;color:var(--gold);opacity:.95;background:var(--cream);border-radius:50%;padding:12px;box-shadow:var(--shadow-l);}
+  .about-body .lead{font-size:var(--step-1);color:var(--text-soft);}
+  .quote{font-family:var(--serif);font-style:italic;font-size:var(--step-3);line-height:1.32;color:var(--ember-deep);margin:var(--space-4) 0;padding-left:22px;border-left:3px solid var(--gold);text-wrap:balance;}
+  .sign{display:flex;align-items:center;gap:14px;margin-top:var(--space-3);}
+  .sign .name{font-family:var(--serif);font-weight:600;font-size:var(--step-1);color:var(--text);}
+  .sign .role{font-size:var(--step--1);color:var(--text-faint);}
+  .quali{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--space-4);}
+  .quali span{font-size:13px;color:var(--ember-deep);background:var(--sage-soft);border:1px solid rgba(193,98,46,.18);padding:7px 13px;border-radius:var(--radius-pill);}
+
+  /* ===== Für wen ===== */
+  .fitgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .fitcard{border-radius:var(--radius);padding:28px 26px;box-shadow:var(--edge-l), var(--shadow-l);}
+  .fitcard.yes{background:var(--warm-white);border:1px solid var(--line-l);}
+  .fitcard.no{background:var(--sage-soft);border:1px solid rgba(193,98,46,.16);}
+  .fitcard h3{font-size:var(--step-2);margin-bottom:14px;}
+  .fitcard ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+  .fitcard li{display:flex;gap:10px;align-items:flex-start;font-size:var(--step-0);color:var(--text-soft);}
+  .fitcard li svg{flex:none;margin-top:3px;}
+
+  /* ===== Galerie (Praxis & Retreats) ===== */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .gallery figure{position:relative;overflow:hidden;border-radius:var(--radius-sm);box-shadow:var(--shadow-l);background:var(--sage-soft);aspect-ratio:4/3;}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease);}
+  .gallery figure:hover img{transform:scale(1.05);}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 10px;font-size:13px;color:#fff;
+    background:linear-gradient(180deg,transparent,rgba(20,14,11,.8));opacity:0;transform:translateY(6px);transition:opacity .3s var(--ease),transform .3s var(--ease);}
+  .gallery figure:hover figcaption,.gallery figure:focus-within figcaption{opacity:1;transform:none;}
+  .gallery .wide{grid-column:span 2;}
+
+  /* ===== Ablauf ===== */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .step{position:relative;background:var(--warm-white);border:1px solid var(--line-l);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--edge-l), var(--shadow-l);}
+  .step .num{font-family:var(--serif);font-weight:600;font-size:var(--step-1);color:var(--ember-deep);background:var(--sage-soft);width:46px;height:46px;border-radius:var(--radius-sm);display:grid;place-items:center;margin-bottom:16px;box-shadow:inset 0 0 0 1px rgba(193,98,46,.14);}
+  .step h3{font-size:var(--step-2);margin-bottom:7px;color:var(--text);} .step p{color:var(--text-soft);font-size:var(--step-0);}
+
+  /* ===== Preise ===== */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .price-card{background:var(--warm-white);border:1px solid var(--line-l);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--edge-l), var(--shadow-l);}
+  .price-card h3{font-size:var(--step-2);color:var(--text);margin-bottom:14px;}
+  .price-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-top:1px solid var(--line-l);}
+  .price-row:first-of-type{border-top:none;}
+  .price-row .lbl{font-size:14.5px;color:var(--text-soft);}
+  .price-row .val{font-family:var(--serif);font-weight:600;font-size:var(--step-1);color:var(--ember-deep);white-space:nowrap;}
+  .price-note{margin-top:14px;font-size:13px;color:var(--text-faint);}
+
+  /* ===== Stimmen ===== */
+  .voices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .voice{background:var(--ink);color:var(--bone);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow-d);}
+  .voice .stars{color:var(--gold);font-size:15px;letter-spacing:2px;margin-bottom:12px;}
+  .voice p{font-style:italic;font-family:var(--serif);font-size:var(--step-1);line-height:1.5;color:#f1e8da;}
+  .voice .who{margin-top:16px;font-size:13.5px;color:var(--bone-faint);}
+
+  /* ===== FAQ ===== */
+  .faq{max-width:800px;}
+  .faq details{background:var(--warm-white);border:1px solid var(--line-l);border-radius:var(--radius-sm);padding:6px 22px;margin-bottom:10px;box-shadow:var(--edge-l);}
+  .faq summary{cursor:pointer;list-style:none;font-family:var(--serif);font-weight:600;font-size:var(--step-1);padding:16px 26px 16px 0;position:relative;color:var(--text);}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";position:absolute;right:0;top:14px;font-size:22px;color:var(--ember);transition:transform .25s var(--ease);}
+  .faq details[open] summary::after{transform:rotate(45deg);}
+  .faq .a{padding:0 0 18px;color:var(--text-soft);font-size:var(--step-0);line-height:var(--lh-relaxed);}
+
+  /* ===== Kontakt ===== */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:start;}
+  .contact-info{display:flex;flex-direction:column;gap:16px;}
+  .info-row{display:flex;gap:14px;align-items:flex-start;}
+  .info-row .ic{display:grid;place-items:center;width:46px;height:46px;border-radius:var(--radius-sm);background:var(--sage-soft);color:var(--ember-deep);flex:none;box-shadow:inset 0 0 0 1px rgba(193,98,46,.12);}
+  .info-row .lbl{font-size:13px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.06em;}
+  .info-row a,.info-row .val{font-size:var(--step-1);color:var(--text);font-weight:600;}
+  .info-row a:hover{color:var(--ember);}
+  .promise{margin-top:var(--space-3);font-size:var(--step-0);color:var(--text-soft);background:var(--sage-soft);border:1px solid rgba(193,98,46,.12);border-radius:var(--radius-sm);padding:14px 16px;}
+  .notfall{margin-top:14px;font-size:13.5px;color:var(--ember-deep);background:#fff3ea;border:1px solid rgba(193,98,46,.25);border-radius:var(--radius-sm);padding:12px 14px;line-height:1.5;}
+  .card{background:var(--warm-white);border:1px solid var(--line-l);border-radius:var(--radius-lg);padding:30px 28px;box-shadow:var(--edge-l), var(--shadow-l);}
+  .demo-flag{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ember-deep);background:rgba(193,98,46,.08);border:1px solid rgba(193,98,46,.22);border-radius:var(--radius-sm);padding:11px 14px;margin-bottom:18px;line-height:1.45;}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:15px;}
+  .field label{font-size:13px;font-weight:600;color:var(--text-soft);}
+  .field input,.field textarea,.field select{font-family:var(--sans);font-size:15px;color:var(--text);background:var(--cream);border:1.5px solid var(--line-l);border-radius:var(--radius-sm);padding:12px 14px;transition:border-color .2s var(--ease),box-shadow .2s var(--ease);width:100%;}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--ember);box-shadow:var(--focus);}
+  .field textarea{resize:vertical;min-height:96px;}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .form .btn{width:100%;justify-content:center;margin-top:4px;}
+  .form-msg{display:none;margin-top:14px;padding:14px 16px;border-radius:var(--radius-sm);font-size:var(--step-0);line-height:1.55;}
+  .form-msg.ok{display:block;background:rgba(217,165,76,.16);border:1px solid rgba(217,165,76,.5);color:#6b4a1c;}
+  .form-note{display:flex;align-items:flex-start;gap:8px;margin-top:14px;color:var(--text-faint);font-size:var(--step--1);}
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;}
+
+  /* ===== Anfahrt ===== */
+  .anfahrt-card{background:radial-gradient(120% 150% at 0% 0%,var(--ink-2),var(--ink) 65%);color:var(--bone);border-radius:var(--radius-lg);padding:clamp(28px,4.5vw,52px);box-shadow:var(--shadow-d);position:relative;overflow:hidden;}
+  .anfahrt-card h2{color:#fbf5ea;font-size:var(--step-3);}
+  .anfahrt-card p{color:var(--bone-dim);margin-top:14px;max-width:60ch;}
+  .anfahrt-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:var(--space-4);}
+  .anfahrt-item{background:rgba(247,240,230,.06);border:1px solid rgba(247,240,230,.14);border-radius:var(--radius-sm);padding:18px 20px;}
+  .anfahrt-item .lbl2{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-soft);margin-bottom:6px;}
+  .anfahrt-item .v{font-size:15px;color:#f1e8da;}
+  .maplink{display:inline-flex;align-items:center;gap:8px;margin-top:var(--space-4);color:var(--gold-soft);font-weight:600;font-size:14.5px;}
+  .maplink:hover{color:#fff;}
+
+  /* ===== Footer ===== */
+  .site-footer{background:var(--ink-deep);color:var(--bone-dim);padding:clamp(48px,7vw,72px) 0 110px;}
+  @media (min-width:781px){.site-footer{padding-bottom:40px;}}
+  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px;}
+  .foot-brand .wm{font-size:21px;}
+  .foot-brand .tag{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--bone);margin-top:12px;}
+  .foot-brand .addr{font-size:13.5px;color:var(--bone-faint);margin-top:14px;line-height:1.8;}
+  .foot-col h3{font-family:var(--serif);font-size:14px;letter-spacing:.02em;color:var(--gold-soft);font-weight:600;margin-bottom:14px;}
+  .foot-col a{display:block;color:var(--bone-dim);padding:5px 0;transition:color .2s var(--ease);font-size:14.5px;}
+  .foot-col a:hover{color:#fbf5ea;}
+  .foot-bottom{margin-top:clamp(32px,5vw,48px);padding-top:22px;border-top:1px solid rgba(247,240,230,.14);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--bone-faint);}
+  .foot-bottom .hand{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold-soft);}
+
+  /* ===== Sticky Mobil-Kontaktleiste ===== */
+  .mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;display:none;grid-template-columns:1fr 1fr 1fr;
+    background:rgba(26,18,15,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(247,240,230,.16);box-shadow:0 -10px 30px -12px rgba(0,0,0,.5);}
+  .mobile-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:9px 4px;color:var(--bone);font-size:11.5px;font-weight:600;min-height:58px;}
+  .mobile-bar a+a{border-left:1px solid rgba(247,240,230,.14);}
+  .mobile-bar a svg{flex:none;}
+  .mobile-bar a.accent{background:linear-gradient(180deg,var(--ember),var(--ember-deep));}
+
+  /* ===== Fokus / A11y ===== */
+  :where(a,button,.btn,input,textarea,select,.wm,summary):focus-visible{outline:none;box-shadow:var(--focus);border-radius:var(--radius-sm);}
+  .dark a:focus-visible,.hero a:focus-visible,.anfahrt-card a:focus-visible,.mobile-bar a:focus-visible,.trust-bar a:focus-visible{box-shadow:var(--focus-d);}
+  .skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--ember);color:#fff;padding:10px 16px;border-radius:var(--radius-sm);font-weight:600;}
+  .skip:focus{left:16px;}
+
+  /* ===== Reveal & Responsive ===== */
+  .js .reveal > *{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+  .js .reveal.in > *{opacity:1;transform:none;}
+  .js .reveal .stagger > *{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
+  .js .reveal.in .stagger > *{opacity:1;transform:none;}
+  .js .reveal.in .stagger > *:nth-child(2){transition-delay:.06s;}
+  .js .reveal.in .stagger > *:nth-child(3){transition-delay:.12s;}
+  .js .reveal.in .stagger > *:nth-child(4){transition-delay:.18s;}
+  .foto .reveal > *,.foto .reveal .stagger > *{opacity:1 !important;transform:none !important;transition:none !important;}
+  .foto .mobile-bar{display:none !important;}
+  .foto .hero{min-height:auto;}
+
+  @media (max-width:920px){
+    .nav-links{position:fixed;inset:var(--nav-h) 0 auto 0;flex-direction:column;align-items:stretch;gap:0;background:var(--warm-white);border-bottom:1px solid var(--line-l);padding:10px 6vw 22px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:.3s;box-shadow:var(--shadow-l);max-height:80vh;overflow-y:auto;}
+    .nav-links.open{transform:none;opacity:1;pointer-events:auto;}
+    .nav-links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line-l);} .nav-links a:not(.btn)::after{display:none;}
+    .nav-links .btn{margin-top:14px;justify-content:center;} .nav-toggle{display:block;}
+    .about-grid,.contact-grid,.anfahrt-grid{grid-template-columns:1fr;}
+    .about-portrait{max-width:280px;margin-inline:auto;}
+    .trust-grid{grid-template-columns:1fr 1fr;}
+    .svc-grid,.steps,.price-grid,.voices,.fitgrid{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:600px){
+    .two{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:1fr 1fr;gap:9px;} .gallery .wide{grid-column:span 2;}
+    .about-portrait{max-width:230px;}
+    .about-portrait .deco{width:58px;right:-8px;bottom:-8px;padding:9px;}
+    .hero-cta{flex-direction:column;align-items:stretch;} .hero-cta .btn{justify-content:center;}
+    .foot-top{grid-template-columns:1fr;} .foot-bottom{flex-direction:column;align-items:flex-start;}
+    .mobile-bar{display:grid;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;scroll-behavior:auto !important;}
+    .js .reveal > *,.js .reveal .stagger > *{opacity:1 !important;transform:none !important;transition:none !important;}
+    .svc,.step,.btn{transition:none !important;transform:none !important;}
+  }
+  @media print{
+    .nav,.hero-cta,.mobile-bar,.nav-toggle,.demo-flag,form,.lcbook{display:none !important;}
+    body{background:#fff;color:#000;}
+    .hero{min-height:auto;color:#000;padding:20px 0;} .hero::after,.hero-img{display:none;}
+    .hero h1,.hero-sub{color:#000;}
+    a{color:#000;text-decoration:underline;}
+    section{padding:14px 0;}
+  }
+
+  /* ===== Termin-Buchungsband (.lcbook) — Lechcode-Standard, eigenständig gestylt, Farben hartkodiert ===== */
+  .lcbook{background:#16130c;color:#f3ece0;padding:clamp(44px,7vw,72px) 0;position:relative;overflow:hidden;}
+  .lcbook::before{content:"";position:absolute;inset:0;background:radial-gradient(60vmax 40vmax at 85% 20%,rgba(231,185,100,.12),transparent 60%);pointer-events:none;}
+  .lcbook-in{position:relative;max-width:640px;margin-inline:auto;text-align:center;}
+  .lcbook h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,3vw,32px);color:#f9f4ea;margin-bottom:12px;}
+  .lcbook p{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#cbbfa8;font-size:15.5px;line-height:1.6;margin-bottom:22px;}
+  .lcbook-btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,#e8923f,#d97a28);color:#1b1409;font-weight:700;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:15.5px;padding:14px 26px;border-radius:999px;box-shadow:0 16px 28px -14px rgba(217,122,40,.6);}
+  .lcbook-hint{margin-top:14px;font-size:12.5px;color:#9c8f78;}
+  </style>
+</head>
+
+<body id="top">
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <!-- NAV -->
+  <header class="nav">
+    <nav class="wrap nav-in" aria-label="Hauptnavigation">
+      <a class="wm" href="#top" aria-label="Nadya Seeberger — Startseite">
+        <svg class="phoenix" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="currentColor"/>
+          <circle cx="32" cy="24" r="4.5" fill="#E8A15B"/>
+        </svg>
+        <span>Nadya&nbsp;Seeberger</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#galerie">Praxis</a>
+        <a href="#preise">Preise</a>
+        <a href="#stimmen">Stimmen</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn" href="#kontakt">Kostenfreies Erstgespräch <span class="arr">→</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <picture>
+        <source type="image/webp" srcset="assets/hero-nadya-500.webp 500w, assets/hero-nadya-800.webp 800w, assets/hero-nadya-1100.webp 1100w" sizes="100vw">
+        <img class="hero-img" src="assets/hero-nadya-900.jpg" srcset="assets/hero-nadya-480.jpg 480w, assets/hero-nadya-800.jpg 800w, assets/hero-nadya-900.jpg 900w" sizes="100vw" width="1100" height="1649" alt="Nadya Seeberger, lächelnd, Gründerin ihrer Praxis für Hypnose, Breathwork und Coaching in Biel" fetchpriority="high">
+      </picture>
+      <div class="wrap">
+        <div class="hero-inner">
+          <span class="eyebrow">Hypnose · Breathwork · Coaching · Biel &amp; online</span>
+          <h1>Wandel beginnt mit <em>einem Atemzug.</em></h1>
+          <p class="hero-sub">Ich begleite dich mit Hypnose, Breathwork und herzzentriertem Coaching durch Umbruchphasen — einfühlsam, erfahren, seit 19 Jahren. Live in Biel oder bequem online.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#kontakt">Kostenfreies Erstgespräch <span class="arr">→</span></a>
+            <a class="btn btn-ghost" href="#leistungen">Angebote ansehen</a>
+          </div>
+          <!-- HIER: Telefonnummer -->
+          <a class="hero-tel" href="tel:+41793683553" style="margin-top:18px;display:inline-flex;align-items:center;gap:9px;font-weight:600;color:#fdfbf5;font-size:var(--step-0);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +41 79 368 35 53
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VERTRAUENSLEISTE -->
+    <section class="trust-bar" style="padding:0;">
+      <div class="wrap">
+        <div class="trust-grid">
+          <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg><span><b>19 Jahre Erfahrung</b>in ganzheitlicher Begleitung</span></div>
+          <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Live in Biel &amp; online</b>Deutsch, Englisch, Französisch</span></div>
+          <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4z"/><path d="M19 11a7 7 0 0 1-14 0M12 19v3"/></svg><span><b>Mehrfach zertifiziert</b>Hypnose, RTT, Breathwork &amp; mehr</span></div>
+          <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Kostenfreies Erstgespräch</b>unverbindlich kennenlernen</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEISTUNGEN -->
+    <section class="light reveal" id="leistungen">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Meine Angebote</span>
+          <h2>Drei Wege zu innerer Klarheit — einer davon passt zu dir.</h2>
+          <p>Ob Hypnose, Atemarbeit oder Coaching: Jede Methode setzt an einer anderen Stelle an. Im kostenfreien Erstgespräch finden wir gemeinsam heraus, was zu deinem Anliegen passt.</p>
+        </div>
+        <div class="svc-grid stagger">
+          <div class="svc">
+            <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+            <h3>Wenn alte Muster dich festhalten</h3>
+            <p>Ängste, blockierende Glaubenssätze oder Erfahrungen, die einfach nicht loslassen wollen: In der Hypnose arbeiten wir direkt mit dem Unterbewusstsein — behutsam und in deinem Tempo, live in Biel oder online.</p>
+            <span class="method">Hypnosetherapie · RTT</span>
+          </div>
+          <div class="svc">
+            <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-4 3-4 7 0 9s4 6 0 9M6 8c-2 2-2 5 0 7M18 8c2 2 2 5 0 7"/></svg></span>
+            <h3>Wenn du dich wieder spüren willst</h3>
+            <p>Breathwork nutzt gezielte Atemtechniken, um angestaute Anspannung zu lösen und Klarheit zu schaffen — als Einzelsitzung, in der Gruppe oder auf einem mehrtägigen Retreat.</p>
+            <span class="method">Breathwork · Atemreisen</span>
+          </div>
+          <div class="svc">
+            <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 8.6c0 4.9-8.8 10.4-8.8 10.4S3.2 13.5 3.2 8.6a4.8 4.8 0 0 1 8.8-2.7 4.8 4.8 0 0 1 8.8 2.7z"/></svg></span>
+            <h3>Wenn du eine klare Entscheidung suchst</h3>
+            <p>Herzzentriertes Coaching verbindet Kopf und Bauchgefühl: Wir arbeiten an dem, was dich beruflich oder persönlich weiterbringt — mit Struktur und Raum für das, was wirklich zählt.</p>
+            <span class="method">Herzzentriertes Coaching</span>
+          </div>
+          <div class="svc">
+            <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9.5-9C.6 8 3 4 7 4c2 0 4 1.4 5 3 1-1.6 3-3 5-3 4 0 6.4 4 4.5 8-2.5 4.6-9.5 9-9.5 9z"/></svg></span>
+            <h3>Wenn eine ruhige Geburt dein Wunsch ist</h3>
+            <p>Als offizielle HypnoBirthing-Kursleiterin (Schweiz) bereite ich werdende Eltern auf eine gelassenere Geburt vor: Atemtechniken, Schmerzmanagement, die Rolle des Partners und die „Safe Place"-Übung.</p>
+            <span class="method">HypnoBirthing-Kurs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜBER MICH -->
+    <section class="sand reveal" id="ueber-mich">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="about-portrait">
+            <picture>
+              <source type="image/webp" srcset="assets/portrait-ueber-mich-260.webp 260w, assets/portrait-ueber-mich-400.webp 400w, assets/portrait-ueber-mich-560.webp 560w" sizes="(max-width:600px) 210px, (max-width:920px) 280px, 34vw">
+              <img src="assets/portrait-ueber-mich-400.jpg" srcset="assets/portrait-ueber-mich-260.jpg 260w, assets/portrait-ueber-mich-400.jpg 400w, assets/portrait-ueber-mich-560.jpg 560w" sizes="(max-width:600px) 210px, (max-width:920px) 280px, 34vw" width="560" height="682" alt="Nadya Seeberger, Nahaufnahme, lächelnd" loading="lazy" decoding="async">
+              <svg class="deco" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="currentColor"/></svg>
+            </picture>
+          </div>
+          <div class="about-body">
+            <span class="eyebrow">Über mich</span>
+            <h2 style="font-size:var(--step-4);margin-top:var(--space-2);">Hallo, ich bin Nadya.</h2>
+            <p class="lead" style="margin-top:var(--space-3);">Mein eigener Weg begann nach der Geburt meiner ersten Tochter 2004 — mit einer tiefen Neugier auf ganzheitliche Gesundheit. Über Naturheilkunde, Mental-Coaching und Ernährungslehre führte er mich 2006 zur eigenen Praxis in Kanada. 2014 kehrte ich in die Schweiz zurück und machte meine erste Hypnose-Ausbildung — seither begleite ich Menschen als Wegbegleiterin durch ihre Umbruchphasen, heute von meiner eigenen Praxis in Biel aus.</p>
+            <blockquote class="quote">„Der Phoenix ist für mich die Quelle der Transformation und des Wachstums — die Kraft des Wandels und die Entfaltung eines neuen Lebenszyklus."</blockquote>
+            <p class="lead">Als alleinerziehende Mutter zweier Töchter weiss ich, was echter Wandel bedeutet — und begleite dich mit genau dieser Erfahrung.</p>
+            <div class="quali">
+              <span>Dipl. Hypnosetherapeutin HS</span>
+              <span>RTT-Hypnose (England)</span>
+              <span>Zert. Breathwork Trainerin</span>
+              <span>Dipl. Naturheilpraktikerin</span>
+              <span>Zert. Ernährungsberaterin</span>
+              <span>Mental Coach Berufskarriere</span>
+            </div>
+            <div class="sign">
+              <span class="wm" style="font-size:20px;"><svg width="30" height="30" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="var(--ember)"/></svg></span>
+              <span><span class="name">Nadya Seeberger</span><br><span class="role">Hypnose · Breathwork · Coaching · Biel</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FÜR WEN -->
+    <section class="light reveal" id="fuer-wen">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Passt das zu dir?</span>
+          <h2>Für wen meine Arbeit gedacht ist — und für wen nicht.</h2>
+        </div>
+        <div class="fitgrid">
+          <div class="fitcard yes">
+            <h3>Du bist hier richtig, wenn …</h3>
+            <ul>
+              <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#6b8f4e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l4 4 8-8"/></svg><span>du dich in einer Umbruch- oder Krisensituation befindest und einen sicheren Raum dafür suchst.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#6b8f4e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l4 4 8-8"/></svg><span>du bereit bist, aktiv an dir zu arbeiten — allein oder gemeinsam.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#6b8f4e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l4 4 8-8"/></svg><span>du (werdende) Eltern bist und dich auf eine ruhigere Geburt vorbereiten willst.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#6b8f4e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l4 4 8-8"/></svg><span>du dich auf ein herzzentriertes Retreat oder eine Gruppen-Atemreise einlassen möchtest.</span></li>
+            </ul>
+          </div>
+          <div class="fitcard no">
+            <h3>Weniger passend, wenn …</h3>
+            <ul>
+              <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#9c4b22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l10 10M14 4L4 14"/></svg><span>du dich in einer akuten psychischen Krise befindest — dafür brauchst du ärztliche oder psychotherapeutische Hilfe (siehe Notfall-Hinweis im Kontaktbereich).</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#9c4b22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l10 10M14 4L4 14"/></svg><span>du eine schulmedizinische Diagnose oder Behandlung suchst — meine Angebote ersetzen keinen Arztbesuch.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#9c4b22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l10 10M14 4L4 14"/></svg><span>du eine schnelle „Lösung von aussen" suchst statt eigener Mitarbeit.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE: PRAXIS & RETREATS -->
+    <section class="light reveal" id="galerie">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Ein Blick hinein</span>
+          <h2>Meine Praxis in Biel — und die Orte meiner Retreats.</h2>
+          <p>Ruhige Räume für Hypnose und Coaching, dazu Naturplätze im Allgäu und am Säntis für gemeinsame Breathwork-Retreats.</p>
+        </div>
+        <div class="gallery stagger">
+          <figure class="wide"><picture><source type="image/webp" srcset="assets/raum-1-400.webp 400w, assets/raum-1-800.webp 800w" sizes="(max-width:600px) 100vw, 50vw"><img src="assets/raum-1-800.jpg" srcset="assets/raum-1-400.jpg 400w, assets/raum-1-800.jpg 800w" sizes="(max-width:600px) 100vw, 50vw" width="800" height="600" alt="Behandlungsraum von Nadya Seeberger mit Liege und hellen Möbeln" loading="lazy" decoding="async"></picture><figcaption>Praxisraum in Biel</figcaption></figure>
+          <figure><picture><source type="image/webp" srcset="assets/raum-2-400.webp 400w, assets/raum-2-800.webp 800w" sizes="(max-width:600px) 50vw, 25vw"><img src="assets/raum-2-800.jpg" srcset="assets/raum-2-400.jpg 400w, assets/raum-2-800.jpg 800w" sizes="(max-width:600px) 50vw, 25vw" width="800" height="600" alt="Behandlungsraum, zweite Perspektive" loading="lazy" decoding="async"></picture><figcaption>Ruhiger Rückzugsort</figcaption></figure>
+          <figure><picture><source type="image/webp" srcset="assets/retreat-session-400.webp 400w, assets/retreat-session-700.webp 700w" sizes="(max-width:600px) 50vw, 25vw"><img src="assets/retreat-session-700.jpg" srcset="assets/retreat-session-400.jpg 400w, assets/retreat-session-700.jpg 700w" sizes="(max-width:600px) 50vw, 25vw" width="700" height="600" alt="Nadya Seeberger während einer Breathwork-Session" loading="lazy" decoding="async"></picture><figcaption>Breathwork in Aktion</figcaption></figure>
+          <figure><picture><source type="image/webp" srcset="assets/retreat-raum-400.webp 400w, assets/retreat-raum-800.webp 800w" sizes="(max-width:600px) 50vw, 25vw"><img src="assets/retreat-raum-800.jpg" srcset="assets/retreat-raum-400.jpg 400w, assets/retreat-raum-800.jpg 800w" sizes="(max-width:600px) 50vw, 25vw" width="800" height="600" alt="Breathwork-Raum mit Matten und Kissen im Kreis" loading="lazy" decoding="async"></picture><figcaption>Retreat-Raum</figcaption></figure>
+          <figure><picture><source type="image/webp" srcset="assets/retreat-ort-1-400.webp 400w, assets/retreat-ort-1-1200.webp 1200w" sizes="(max-width:600px) 50vw, 25vw"><img src="assets/retreat-ort-1-800.jpg" srcset="assets/retreat-ort-1-400.jpg 400w, assets/retreat-ort-1-800.jpg 800w" sizes="(max-width:600px) 50vw, 25vw" width="1200" height="900" alt="Garten- und Teichanlage am Retreat-Ort im Allgäu" loading="lazy" decoding="async"></picture><figcaption>Retreat-Ort Allgäu</figcaption></figure>
+          <figure class="wide"><picture><source type="image/webp" srcset="assets/retreat-ort-2-400.webp 400w, assets/retreat-ort-2-1200.webp 1200w" sizes="(max-width:600px) 100vw, 50vw"><img src="assets/retreat-ort-2-800.jpg" srcset="assets/retreat-ort-2-400.jpg 400w, assets/retreat-ort-2-800.jpg 800w" sizes="(max-width:600px) 100vw, 50vw" width="1300" height="787" alt="Aussenansicht der Retreat-Location Hollerbühl" loading="lazy" decoding="async"></picture><figcaption>Retreat-Location „Hollerbühl"</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <section class="sand reveal" id="ablauf">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">So läuft es ab</span>
+          <h2>In drei Schritten zu deiner ersten Sitzung.</h2>
+        </div>
+        <div class="steps stagger">
+          <div class="step"><div class="num">1</div><h3>Kontakt aufnehmen</h3><p>Du schreibst mir kurz, worum es geht — über das Formular, per E-Mail oder Telefon.</p></div>
+          <div class="step"><div class="num">2</div><h3>Kostenfreies Erstgespräch</h3><p>In einem unverbindlichen Gespräch lernen wir uns kennen und finden gemeinsam den passenden Weg für dich.</p></div>
+          <div class="step"><div class="num">3</div><h3>Deine Begleitung beginnt</h3><p>Live in Biel oder online via Zoom — in deinem Tempo, so lange du sie brauchst.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREISE -->
+    <section class="light reveal" id="preise">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Honorar</span>
+          <h2>Transparente Preise — live oder online, derselbe Tarif.</h2>
+          <p>Alle Sitzungen dauern ca. 2–2,5 Stunden. Selbstzahler-Basis in Schweizer Franken (CHF).</p>
+        </div>
+        <div class="price-grid stagger">
+          <div class="price-card">
+            <h3>Hypnosesitzung</h3>
+            <div class="price-row"><span class="lbl">1 Sitzung</span><span class="val">CHF 120</span></div>
+            <div class="price-row"><span class="lbl">Kombi Hypnose + Atemreise</span><span class="val">CHF 390</span></div>
+            <div class="price-row"><span class="lbl">3 Sitzungen</span><span class="val">CHF 685</span></div>
+            <p class="price-note">Für tiefliegende, komplexere Themen empfehle ich das 3er-Paket.</p>
+          </div>
+          <div class="price-card">
+            <h3>Breathwork / Atemreise</h3>
+            <div class="price-row"><span class="lbl">1 Sitzung</span><span class="val">CHF 120</span></div>
+            <div class="price-row"><span class="lbl">Kombi Hypnose + Atemreise</span><span class="val">CHF 490</span></div>
+            <div class="price-row"><span class="lbl">3 Atemreisen</span><span class="val">CHF 685</span></div>
+            <p class="price-note">Auch als Gruppen-Journey oder mehrtägiges Retreat buchbar.</p>
+          </div>
+          <div class="price-card">
+            <h3>Herzzentriertes Coaching</h3>
+            <div class="price-row"><span class="lbl">1 Sitzung</span><span class="val">CHF 120</span></div>
+            <div class="price-row"><span class="lbl">Kombi Coaching + Atemreise/Hypnose</span><span class="val">CHF 390</span></div>
+            <div class="price-row"><span class="lbl">3 Sitzungen</span><span class="val">CHF 685</span></div>
+            <p class="price-note">Ideal bei beruflichen oder persönlichen Entscheidungen.</p>
+          </div>
+        </div>
+        <p style="margin-top:var(--space-4);color:var(--text-faint);font-size:14px;">HypnoBirthing-Kurs und Retreats: Preise auf Anfrage im kostenfreien Erstgespräch — <span style="color:var(--ember-deep);">[KLÄREN: Kurspreis nicht auf Altseite gefunden, s. OFFENE-FRAGEN]</span>.</p>
+      </div>
+    </section>
+
+    <!-- STIMMEN -->
+    <section class="sand reveal" id="stimmen">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Was Klientinnen sagen</span>
+          <h2>Echte Stimmen — zur Begleitung, nicht zum Heilerfolg.</h2>
+        </div>
+        <div class="voices stagger">
+          <div class="voice">
+            <p>„Ich habe mich bei Nadya von Anfang an sehr wohl, gesehen und ernst genommen gefühlt."</p>
+            <div class="who">— Ana R.</div>
+          </div>
+          <div class="voice">
+            <p>„Nadya geht sehr sensibel mit den Menschen und ihren Themen um und ist ein wahrer Sonnenschein und eine warme Seele."</p>
+            <div class="who">— Kaja H.</div>
+          </div>
+          <div class="voice">
+            <p>„Die Breathwork-Session bei Nadya war eine zutiefst berührende Erfahrung. Ich habe mich zu jeder Zeit gut aufgehoben gefühlt."</p>
+            <div class="who">— Vero C.</div>
+          </div>
+        </div>
+        <p style="margin-top:var(--space-4);font-size:13px;color:var(--text-faint);">Stimmen von der bisherigen Website übernommen (Inhalte-Freigabe), gekürzt auf den Aspekt Atmosphäre/Begleitung. Vollständige schriftliche Freigabe für die finale Version bitte bei den Klientinnen einholen.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="light reveal" id="faq">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Häufige Fragen</span>
+          <h2>Bevor du dich meldest.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Was passiert beim kostenfreien Erstgespräch?</summary><div class="a">Wir lernen uns in Ruhe kennen, du erzählst, worum es dir geht, und ich erkläre, wie ich arbeiten würde. Ganz unverbindlich — du entscheidest danach in deinem Tempo.</div></details>
+          <details><summary>Findet die Sitzung live in Biel oder online statt?</summary><div class="a">Beides ist möglich. Live in meiner Praxis am Unteren Quai 31 in Biel, oder online per Zoom — auf Deutsch, Englisch oder Französisch.</div></details>
+          <details><summary>Wie viele Sitzungen brauche ich?</summary><div class="a">Das ist individuell. Für viele Anliegen reicht eine Einzelsitzung, bei tiefliegenden Themen empfehle ich häufig ein 3er-Paket. Im Erstgespräch besprechen wir das gemeinsam.</div></details>
+          <details><summary>Übernimmt meine Krankenkasse die Kosten?</summary><div class="a">Meine Angebote sind Selbstzahler-Leistungen ausserhalb der Grundversicherung. <span style="color:var(--ember-deep);">[KLÄREN: mögliche Zusatzversicherungs-Anerkennung nicht auf Altseite dokumentiert]</span>.</div></details>
+          <details><summary>Ist Hypnose dasselbe wie Show-Hypnose?</summary><div class="a">Nein. Es handelt sich um eine seriöse, therapeutisch orientierte Methode, die mit deinem Unterbewusstsein arbeitet — du bist dabei jederzeit ansprechbar und hast die Kontrolle.</div></details>
+          <details><summary>Was ist, wenn es zwischen uns nicht passt?</summary><div class="a">Das kann vorkommen — und ist völlig in Ordnung. Sag es mir einfach offen, ich unterstütze dich gern bei der Suche nach einer passenderen Anlaufstelle.</div></details>
+          <details><summary>Kann ich als (werdende) Mutter einen HypnoBirthing-Kurs besuchen?</summary><div class="a">Ja — ich bin offizielle HypnoBirthing-Kursleiterin (Schweiz) und begleite dich mit Atemtechniken, Schmerzmanagement und der „Safe Place"-Übung auf eine ruhigere Geburt vor.</div></details>
+          <details><summary>Ersetzt eine Sitzung eine Psychotherapie?</summary><div class="a">Nein. Meine Begleitung versteht sich als ergänzende, ganzheitliche Unterstützung — bei akuten psychischen Krisen wende dich bitte zusätzlich an ärztliche oder psychotherapeutische Hilfe (siehe Notfall-Hinweis unten).</div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="sand reveal" id="kontakt">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Kontakt</span>
+          <h2>Schreib mir — ich melde mich persönlich.</h2>
+          <p>Egal ob live in Biel oder online: Nimm einfach Kontakt auf, ich antworte dir zeitnah persönlich.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-row">
+              <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <span><span class="lbl">Telefon</span><br><a href="tel:+41793683553">+41 79 368 35 53</a></span>
+            </div>
+            <div class="info-row">
+              <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+              <span><span class="lbl">E-Mail</span><br><a href="mailto:shift@nadya-seeberger.com">shift@nadya-seeberger.com</a></span>
+            </div>
+            <div class="info-row">
+              <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <span><span class="lbl">Praxis</span><br><span class="val">Unterer Quai 31, 2502 Biel/Bienne</span></span>
+            </div>
+            <p class="promise">🕊️ Ich melde mich innerhalb von 24 Stunden persönlich bei dir zurück.</p>
+            <p class="notfall"><b>In akuten Krisen:</b> 144 (Rettung Schweiz) · Die Dargebotene Hand 143 · <span style="opacity:.85;">[KLÄREN: passt Notfall-Set für CH — Schweizer Nummern ergänzt statt DE-Nummern, s. OFFENE-FRAGEN]</span></p>
+          </div>
+
+          <div class="card">
+            <p class="demo-flag"><span aria-hidden="true">ℹ️</span><span><b>Vorschau-Hinweis:</b> Dies ist eine Design-Vorschau. Im echten Betrieb landet deine Nachricht direkt im Postfach von Nadya — hier wird zum Ausprobieren noch nichts versendet.</span></p>
+            <form class="form" id="kontakt-form" novalidate>
+              <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="two">
+                <div class="field"><label for="name">Dein Name *</label><input id="name" type="text" name="name" required autocomplete="name" placeholder="Vor- und Nachname"></div>
+                <div class="field"><label for="tel">Telefon</label><input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="für den Rückruf"></div>
+              </div>
+              <div class="field"><label for="email">Deine E-Mail *</label><input id="email" type="email" name="email" required autocomplete="email" placeholder="name@beispiel.ch"></div>
+              <div class="field"><label for="thema">Worum geht's?</label>
+                <select id="thema" name="thema">
+                  <option>Hypnosesitzung</option>
+                  <option>Breathwork / Atemreise</option>
+                  <option>Herzzentriertes Coaching</option>
+                  <option>HypnoBirthing-Kurs</option>
+                  <option>Retreat / Workshop</option>
+                  <option>Etwas anderes</option>
+                </select>
+              </div>
+              <div class="field"><label for="nachricht">Deine Nachricht *</label><textarea id="nachricht" name="nachricht" required placeholder="Bitte keine sensiblen Gesundheitsinformationen über das Formular senden — kurz reicht völlig."></textarea></div>
+              <button class="btn" type="submit" id="submit-btn">Nachricht senden <span class="arr">→</span></button>
+              <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
+              <p class="form-note"><span aria-hidden="true">🕊️</span><span>Deine Angaben werden ausschliesslich zur Beantwortung deiner Anfrage genutzt.</span></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANFAHRT / PRAKTISCHES -->
+    <section class="light reveal" id="anfahrt">
+      <div class="wrap">
+        <div class="anfahrt-card">
+          <span class="eyebrow">Anfahrt &amp; Praktisches</span>
+          <h2>Zuhause in Biel — erreichbar aus der ganzen Schweiz.</h2>
+          <p>Meine Praxis liegt am Unteren Quai 31 in Biel/Bienne. Wohnst du weiter weg oder ist es dir lieber von zu Hause aus? Alle Angebote sind auch online über Zoom möglich — auf Deutsch, Englisch oder Französisch.</p>
+          <div class="anfahrt-grid">
+            <div class="anfahrt-item"><div class="lbl2">Adresse</div><div class="v">Unterer Quai 31, 2502 Biel/Bienne</div></div>
+            <div class="anfahrt-item"><div class="lbl2">Online-Option</div><div class="v">Live-Sitzungen via Zoom, DE/EN/FR</div></div>
+            <div class="anfahrt-item"><div class="lbl2">Sprachen</div><div class="v">Deutsch · Englisch · Französisch</div></div>
+            <div class="anfahrt-item"><div class="lbl2">Termine</div><div class="v">Nach Vereinbarung im Erstgespräch</div></div>
+          </div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Unterer+Quai+31,+2502+Biel/Bienne" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Route in Google Maps öffnen
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Termin-Buchungsband (Lechcode-Standard, Phase 7.10) -->
+  <div class="lcbook">
+    <div class="wrap lcbook-in">
+      <h2>Lust auf ein kurzes Gespräch, Nadya?</h2>
+      <p>Wir zeigen dir gern, wie diese Vorschau entstanden ist und was als Nächstes möglich wäre — ca. 30 Minuten, ganz unverbindlich.</p>
+      <a class="lcbook-btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1vusFYCV6O45i109a0J5ruEFtWCT7iFsq5t4Mb2KvQmNhdkMtlddml9dx5V2jButjV2SUGapFg?gv=true" target="_blank" rel="noopener noreferrer">Termin aussuchen →</a>
+      <p class="lcbook-hint">öffnet unseren Kalender in neuem Tab — diese Seite bleibt cookiefrei</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <span class="wm"><svg class="phoenix" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 50c-9-4-15-12-13-24 4 6 8 9 13 10 5-1 9-4 13-10 2 12-4 20-13 24z" fill="currentColor"/></svg><span>Nadya Seeberger</span></span>
+          <p class="tag">Wandel beginnt mit einem Atemzug.</p>
+          <p class="addr">Nadya Seeberger · Unterer Quai 31, 2502 Biel/Bienne<br>shift@nadya-seeberger.com · +41 79 368 35 53</p>
+        </div>
+        <div class="foot-col">
+          <h3>Praxis</h3>
+          <a href="#leistungen">Leistungen</a>
+          <a href="#ueber-mich">Über mich</a>
+          <a href="#preise">Preise</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+        <div class="foot-col">
+          <h3>Rechtliches</h3>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Nadya Seeberger · Biel/Bienne</span>
+        <span class="hand">Handgebaut von Lechcode 🔥</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobil-Kontaktleiste -->
+  <nav class="mobile-bar" aria-label="Schnellkontakt">
+    <a href="tel:+41793683553"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Anrufen</a>
+    <a class="accent" href="#kontakt"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20"/></svg>Erstgespräch</a>
+    <a href="mailto:shift@nadya-seeberger.com"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>E-Mail</a>
+  </nav>
+
+  <script>
+  (function(){
+    var toggle=document.querySelector('.nav-toggle'),links=document.getElementById('nav-links');
+    if(!toggle||!links)return;
+    toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o?'true':'false');toggle.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen');});
+    links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');});});
+  })();
+  (function(){
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,els=document.querySelectorAll('.reveal');
+    function reveal(el){if(el)el.classList.add('in');}
+    if(reduce||!('IntersectionObserver' in window)){els.forEach(reveal);return;}
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -10% 0px'});
+    els.forEach(function(el){io.observe(el);});
+    els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<(window.innerHeight||0)&&r.bottom>0){reveal(el);io.unobserve(el);}});
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){reveal(document.querySelector(a.getAttribute('href')));});});
+  })();
+  /* DEMO-Formular: versendet bewusst NICHT — zeigt einen ehrlichen Vorschau-Hinweis. */
+  (function(){
+    var form=document.getElementById('kontakt-form'),msg=document.getElementById('form-msg'),btn=document.getElementById('submit-btn');
+    if(!form)return;
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(form.querySelector('[name="botcheck"]').checked)return;
+      if(!form.name.value.trim()||!form.email.value.trim()||!form.nachricht.value.trim()){
+        msg.className='form-msg ok';msg.style.background='rgba(193,98,46,.10)';msg.style.borderColor='rgba(193,98,46,.3)';msg.style.color='#9c4b22';
+        msg.textContent='Bitte fülle Name, E-Mail und deine Nachricht aus.';return;
+      }
+      msg.className='form-msg ok';msg.style.cssText='';
+      msg.textContent='Das ist eine Design-Vorschau — deine Nachricht wird hier noch nicht versendet. Im echten Betrieb landet sie direkt bei Nadya, die sich innerhalb von 24 Stunden persönlich meldet. 🔥';
+      btn.disabled=true;btn.style.opacity='.7';
+    });
+  })();
+  </script>
+</body>
+</html>

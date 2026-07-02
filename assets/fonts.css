@@ -1,0 +1,17 @@
+/* ============================================================
+   Nadya Seeberger — lokale Schriften (keine externen Requests)
+   Serif (Headlines/Zitate): Fraunces  400 / 600 / 700 / italic — latin-Subset, woff2
+   Sans  (Fließtext):        Inter     400 / 600              — latin-Subset, woff2
+   Alle Dateien liegen lokal in assets/fonts/. font-display: swap + size-adjust-Fallbacks gegen CLS.
+   ============================================================ */
+
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/fraunces-400.woff2") format("woff2");}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/fraunces-600.woff2") format("woff2");}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/fraunces-700.woff2") format("woff2");}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/fraunces-italic.woff2") format("woff2");}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/inter-400.woff2") format("woff2");}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/inter-600.woff2") format("woff2");}
+
+/* ---------- Fallback-Metriken (gegen Font-Swap-Sprung, aus bestehenden Lechcode-Projekten übernommen) ---------- */
+@font-face{font-family:"Fraunces Fallback";src:local("Georgia");size-adjust:108.4%;ascent-override:97.8%;descent-override:25.5%;line-gap-override:0%;}
+@font-face{font-family:"Inter Fallback";src:local("Arial");size-adjust:107.1%;ascent-override:96.9%;descent-override:24.1%;line-gap-override:0%;}
