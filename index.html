@@ -34,7 +34,8 @@
   <meta name="theme-color" content="#153541" />
   <!-- Favicon: Nadyas echtes Phoenix-Logo (lokal, kein externer Request) -->
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <!-- Schriften lokal gehostet (DSGVO: keine Verbindung zu Google) -->
+  <!-- Schriften lokal gehostet (DSGVO: keine Verbindung zu Google) — Schibsted Grotesk + Sora -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/schibsted-grotesk-600.woff2" crossorigin>
   <link rel="stylesheet" href="assets/fonts.css">
   <!-- Hero-Porträt vorladen (EIN preload mit imagesrcset — LCP-sicher) -->
   <link rel="preload" as="image" href="assets/hero-portrait-760.jpg" imagesrcset="assets/hero-portrait-520.webp 520w, assets/hero-portrait-760.webp 760w, assets/hero-portrait-1040.webp 1040w" imagesizes="(max-width:900px) 88vw, 440px" type="image/webp">
@@ -67,22 +68,23 @@
   </script>
 
   <style>
-  /* ===== 1 · TOKENS — „Phoenix": Koralle / Stahlblau auf Warm-Weiß (Markenfarben aus dem Logo) ===== */
+  /* ===== 1 · TOKENS — „Atemweite": kühl-luftiges Off-White, blau-forward · Koralle als Akzent (Markenfarben aus dem Logo) ===== */
   :root{
     /* dunkle Flächen = tiefes Teal-Navy (verträgt sich mit Koralle UND Blau) */
     --ink:#153541; --ink-deep:#0F2831; --ink-2:#1E4553;
-    /* helle Flächen */
-    --cream:#FBF7F2; --sand:#F2ECE3; --warm-white:#FFFFFF;
+    /* helle Flächen — kühl statt warm-creme */
+    --cream:#F1F5F5; --sand:#E9EFEF; --warm-white:#FFFFFF;
     --sage-soft:#FCE8DF;               /* weiches Pfirsich für Koralle-Chips/Icons */
-    --sky-soft:#E7F1F8;                /* weiches Blau für blaue Akzentflächen */
+    --sky-soft:#E4EEF4;                /* weiches, kühles Blau für blaue Akzentflächen */
     /* Primär-Akzent (CTA) = Koralle · Zweitfarbe (--gold wiederverwendet) = Stahlblau */
-    --ember:#E15A3C; --ember-deep:#C6482B; --gold:#4F9FCD; --gold-soft:#BFE0F2;
-    --blue:#4F9FCD; --blue-deep:#2E7FB0; --coral:#E15A3C;
-    --text:#233039; --text-soft:#556570; --text-faint:#8b98a0;
+    --ember:#E15A3C; --ember-deep:#BE4227; --gold:#4F9FCD; --gold-soft:#BFE0F2;
+    --blue:#4F9FCD; --blue-deep:#27719C; --coral:#E15A3C;
+    --text:#233039; --text-soft:#556570; --text-faint:#5c6a72;
     --bone:#EAF3F8; --bone-dim:#c4d5de; --bone-faint:#8fa6b1;
     --line-l:rgba(30,50,60,.13); --line-d:rgba(234,243,248,.15);
-    --serif:"Fraunces","Fraunces Fallback",Georgia,"Times New Roman",serif;
-    --sans:"Inter","Inter Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    /* „Atemweite" — Modern-Klar: Schibsted Grotesk (Display) + Sora (Fließtext), lokal, mit gemessenen Fallback-Metriken */
+    --serif:"Schibsted Grotesk","Schibsted Grotesk Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    --sans:"Sora","Sora Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 
     --radius:18px; --radius-lg:24px; --radius-sm:11px; --radius-pill:999px;
     --nav-h:68px;
@@ -132,7 +134,7 @@
   .light h2,.light h3,.sand h2,.sand h3{color:var(--text);}
   .sec-head p,.lead{color:var(--text-soft);}
 
-  .eyebrow{font-family:var(--sans);font-weight:600;font-size:var(--step--1);letter-spacing:var(--ls-label);text-transform:uppercase;display:inline-flex;align-items:center;gap:9px;color:var(--ember);}
+  .eyebrow{font-family:var(--sans);font-weight:600;font-size:var(--step--1);letter-spacing:var(--ls-label);text-transform:uppercase;display:inline-flex;align-items:center;gap:9px;color:var(--ember-deep);}
   .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none;}
   .dark .eyebrow{color:var(--gold-soft);} .dark .eyebrow::before{background:var(--gold);}
 
@@ -154,47 +156,54 @@
   .dark .btn-ghost:hover{background:rgba(247,240,230,.08);border-color:rgba(247,240,230,.55);}
 
   /* ===== 2 · NAV ===== */
-  .nav{position:sticky;top:0;z-index:100;height:var(--nav-h);background:rgba(247,240,230,.84);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--line-l);}
+  .nav{position:sticky;top:0;z-index:100;height:var(--nav-h);background:rgba(241,245,245,.82);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--line-l);}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:100%;}
   .nav .wm{font-size:19px;}
   .nav-links{display:flex;align-items:center;gap:26px;}
   .nav-links a:not(.btn){font-size:14.5px;color:var(--text-soft);font-weight:500;position:relative;padding:4px 0;transition:color .2s var(--ease);}
   .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-1px;width:0;height:2px;background:var(--ember);border-radius:2px;transition:width .25s var(--ease);}
   .nav-links a:not(.btn):hover{color:var(--text);} .nav-links a:not(.btn):hover::after{width:100%;}
-  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:12px;min-width:48px;min-height:48px;}
   .nav-toggle span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
   .nav-toggle span+span{margin-top:6px;}
 
-  /* ===== 3 · HERO — heller Split-Hero (Foto ungedimmt, Text auf Warm-Weiß) ===== */
+  /* ===== 3 · HERO — „Atemweite": versetztes Panel, Text auf ruhiger Fläche, Porträt versetzt, Atem-Wellen-Signatur ===== */
   .hero{position:relative;isolation:isolate;overflow:hidden;
-    padding:calc(var(--nav-h) + clamp(28px,5vw,60px)) 0 var(--space-6);
+    padding:calc(var(--nav-h) + clamp(26px,4.5vw,56px)) 0 clamp(48px,7vw,96px);
     background:
-      radial-gradient(48vmax 40vmax at 88% 6%,rgba(79,159,205,.14),transparent 62%),
-      radial-gradient(52vmax 44vmax at 6% 96%,rgba(225,90,60,.10),transparent 60%),
-      linear-gradient(180deg,var(--warm-white),var(--cream));}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;}
-  .hero-inner{max-width:36ch;}
-  .hero h1{font-size:var(--step-5);line-height:var(--lh-tight);letter-spacing:var(--ls-display);margin:var(--space-2) 0 0;color:var(--text);max-width:15ch;}
-  .hero h1 em{font-style:italic;color:var(--coral);position:relative;}
-  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:.14em;border-radius:3px;
-    background:linear-gradient(90deg,var(--gold),#F34C5C 45%,#FC9444);opacity:.9;}
-  .hero-sub{font-size:var(--step-1);line-height:var(--lh-relaxed);color:var(--text-soft);margin-top:var(--space-3);max-width:46ch;}
+      radial-gradient(56vmax 46vmax at 92% 2%,rgba(79,159,205,.16),transparent 60%),
+      radial-gradient(40vmax 40vmax at 2% 104%,rgba(225,90,60,.07),transparent 58%),
+      linear-gradient(180deg,var(--warm-white),var(--cream) 72%);}
+  /* fließende Atem-/Wellen-Signatur — dezent, blau, unter/hinter dem Panel */
+  .hero-wave{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:clamp(120px,17vw,220px);z-index:-1;pointer-events:none;opacity:.9;}
+  .hero-wave path{fill:none;stroke-linecap:round;}
+  /* versetztes Grid: Textpanel links, Porträt rechts leicht tiefer */
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(24px,4.5vw,58px);align-items:start;}
+  .hero-inner{position:relative;max-width:40ch;padding:clamp(24px,3vw,38px) clamp(22px,2.6vw,34px);
+    background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,255,255,.72));
+    border:1px solid rgba(30,50,60,.07);border-radius:var(--radius-lg);
+    box-shadow:0 1px 0 rgba(255,255,255,.7), 0 30px 60px -40px rgba(21,53,65,.28);backdrop-filter:blur(2px);}
+  .hero h1{font-size:var(--step-5);line-height:var(--lh-tight);letter-spacing:var(--ls-display);margin:var(--space-2) 0 0;color:var(--ink);max-width:16ch;font-weight:600;}
+  .hero h1 em{font-style:normal;color:var(--coral);position:relative;white-space:nowrap;}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.06em;height:.13em;border-radius:3px;
+    background:linear-gradient(90deg,var(--blue),#F34C5C 60%,var(--coral));opacity:.85;}
+  .hero-sub{font-size:var(--step-1);line-height:var(--lh-relaxed);color:var(--text-soft);margin-top:var(--space-3);max-width:44ch;}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:var(--space-4);align-items:center;}
   .hero-tel{margin-top:18px;display:inline-flex;align-items:center;gap:9px;font-weight:600;color:var(--blue-deep);font-size:var(--step-0);}
-  /* gerahmtes Porträt rechts */
-  .hero-figure{position:relative;justify-self:center;max-width:440px;width:100%;}
+  /* versetzt gerahmtes Porträt rechts (leicht tiefer als das Textpanel) */
+  .hero-figure{position:relative;justify-self:center;max-width:420px;width:100%;margin-top:clamp(0px,3vw,42px);}
   .hero-figure .frame{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow-l);
     outline:1px solid rgba(30,50,60,.06);aspect-ratio:4/5;background:var(--sky-soft);}
   .hero-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block;}
   .hero-figure .badge{position:absolute;left:-14px;bottom:22px;background:#fff;border-radius:16px;
     padding:12px 16px 12px 14px;box-shadow:var(--shadow-l);display:flex;align-items:center;gap:11px;max-width:210px;}
   .hero-figure .badge img{width:34px;height:auto;flex:none;}
-  .hero-figure .badge b{font-family:var(--serif);font-size:15px;color:var(--text);display:block;line-height:1.15;}
+  .hero-figure .badge b{font-family:var(--serif);font-size:15px;color:var(--ink);display:block;line-height:1.15;font-weight:600;}
   .hero-figure .badge span{font-size:12px;color:var(--text-faint);}
   .hero-figure .glow{position:absolute;inset:-8% -10% -12% -8%;z-index:-1;border-radius:40px;
-    background:radial-gradient(60% 60% at 70% 20%,rgba(79,159,205,.22),transparent 70%),radial-gradient(60% 60% at 20% 90%,rgba(225,90,60,.18),transparent 70%);filter:blur(6px);}
-  .hero .eyebrow{color:var(--coral);}
-  .hero .eyebrow::before{background:linear-gradient(135deg,var(--gold),var(--coral));box-shadow:0 0 10px 1px rgba(225,90,60,.4);}
+    background:radial-gradient(60% 60% at 70% 20%,rgba(79,159,205,.26),transparent 70%),radial-gradient(60% 60% at 20% 90%,rgba(225,90,60,.14),transparent 70%);filter:blur(6px);}
+  .hero .eyebrow{color:var(--ember-deep);}
+  .hero .eyebrow::before{background:linear-gradient(135deg,var(--gold),var(--coral));box-shadow:0 0 10px 1px rgba(79,159,205,.4);}
 
   /* ===== Vertrauensleiste ===== */
   .trust-bar{background:var(--ink-deep);color:var(--bone);border-top:1px solid rgba(247,240,230,.08);}
@@ -203,14 +212,32 @@
   .trust-item svg{flex:none;color:var(--gold);margin-top:2px;}
   .trust-item b{color:#eef6fb;font-weight:600;display:block;font-family:var(--serif);}
 
-  /* ===== Leistungen ===== */
-  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
-  .svc{background:var(--warm-white);border:1px solid var(--line-l);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--edge-l), var(--shadow-l);transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease);}
-  .svc:hover{transform:translateY(-3px);box-shadow:var(--glow-l);border-color:rgba(193,98,46,.3);}
-  .svc .ic{display:inline-grid;place-items:center;width:50px;height:50px;border-radius:14px;background:var(--sage-soft);color:var(--ember-deep);margin-bottom:16px;box-shadow:inset 0 0 0 1px rgba(36,26,22,.1);}
-  .svc h3{font-size:var(--step-2);margin-bottom:8px;color:var(--text);}
+  /* ===== Leistungen — Breathwork foregrounded (Fix 4): 1 primäres Angebot + 3 sekundäre ===== */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .svc{background:var(--warm-white);border:1px solid var(--line-l);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--edge-l), var(--shadow-l);transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease);}
+  .svc:hover{transform:translateY(-3px);box-shadow:var(--glow-l);border-color:rgba(79,159,205,.3);}
+  .svc .ic{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--sky-soft);color:var(--blue-deep);margin-bottom:15px;box-shadow:inset 0 0 0 1px rgba(30,50,60,.08);}
+  .svc h3{font-size:var(--step-1);margin-bottom:8px;color:var(--ink);}
   .svc p{font-size:var(--step-0);color:var(--text-soft);}
-  .svc .method{display:block;margin-top:10px;font-size:13px;color:var(--ember-deep);font-weight:600;letter-spacing:.01em;}
+  .svc .method{display:block;margin-top:10px;font-size:13px;color:var(--blue-deep);font-weight:600;letter-spacing:.01em;}
+  /* Primär-Angebot: Breathwork — volle Breite, blau-forward, größer */
+  .svc-primary{grid-column:1 / -1;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(22px,3.5vw,44px);align-items:center;
+    background:radial-gradient(120% 160% at 0% 0%,var(--ink-2),var(--ink) 70%);color:var(--bone);
+    border:1px solid rgba(79,159,205,.28);border-radius:var(--radius-lg);padding:clamp(26px,3.4vw,44px);
+    box-shadow:var(--shadow-d);position:relative;overflow:hidden;}
+  .svc-primary::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(60vmax 40vmax at 92% 10%,rgba(79,159,205,.22),transparent 60%);}
+  .svc-primary > *{position:relative;z-index:1;}
+  .svc-primary .tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:var(--step--1);
+    letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--gold-soft);}
+  .svc-primary .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none;}
+  .svc-primary h3{font-size:var(--step-3);color:#eef6fb;margin:14px 0 12px;max-width:18ch;}
+  .svc-primary p{font-size:var(--step-1);color:var(--bone-dim);line-height:var(--lh-relaxed);}
+  .svc-primary .prim-list{list-style:none;display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+  .svc-primary .prim-list li{font-size:13.5px;color:#dbe8f0;background:rgba(79,159,205,.14);border:1px solid rgba(79,159,205,.32);padding:7px 13px;border-radius:var(--radius-pill);}
+  .svc-primary .prim-cta{margin-top:22px;}
+  .svc-primary .prim-media{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow-d);outline:1px solid rgba(234,243,248,.12);}
+  .svc-primary .prim-media img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;}
 
   /* ===== Über mich ===== */
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,60px);align-items:center;}
@@ -219,7 +246,7 @@
   .about-portrait img{display:block;width:100%;height:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-l);aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;}
   .about-portrait .deco{position:absolute;right:-14px;bottom:-14px;width:78px;height:auto;background:#fff;border-radius:50%;padding:13px;box-shadow:var(--shadow-l);}
   .about-body .lead{font-size:var(--step-1);color:var(--text-soft);}
-  .quote{font-family:var(--serif);font-style:italic;font-size:var(--step-3);line-height:1.32;color:var(--ember-deep);margin:var(--space-4) 0;padding-left:22px;border-left:3px solid var(--gold);text-wrap:balance;}
+  .quote{font-family:var(--serif);font-weight:600;font-size:var(--step-3);line-height:1.32;color:var(--blue-deep);margin:var(--space-4) 0;padding-left:22px;border-left:3px solid var(--gold);text-wrap:balance;letter-spacing:-.01em;}
   .sign{display:flex;align-items:center;gap:14px;margin-top:var(--space-3);}
   .sign .name{font-family:var(--serif);font-weight:600;font-size:var(--step-1);color:var(--text);}
   .sign .role{font-size:var(--step--1);color:var(--text-faint);}
@@ -259,7 +286,7 @@
   .band .eyebrow{color:var(--gold-soft);}
   .band .eyebrow::before{background:linear-gradient(135deg,var(--gold),var(--coral));}
   .band h2{font-size:var(--step-4);color:#fff;margin:var(--space-2) 0 0;line-height:1.12;}
-  .band .band-line{font-family:var(--serif);font-style:italic;font-size:var(--step-2);color:#fff;margin-top:var(--space-3);line-height:1.4;text-wrap:balance;}
+  .band .band-line{font-family:var(--serif);font-weight:600;font-size:var(--step-2);color:#fff;margin-top:var(--space-3);line-height:1.4;text-wrap:balance;letter-spacing:-.01em;}
   .band p{font-size:var(--step-0);color:rgba(255,255,255,.86);margin-top:var(--space-3);line-height:var(--lh-relaxed);max-width:44ch;}
   .band .band-cta{margin-top:var(--space-4);}
 
@@ -284,7 +311,7 @@
   .voice{background:var(--warm-white);color:var(--text);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--edge-l),var(--shadow-l);border:1px solid var(--line-l);position:relative;}
   .voice::before{content:"\201C";position:absolute;top:10px;right:20px;font-family:var(--serif);font-size:64px;line-height:1;color:var(--coral);opacity:.18;}
   .voice .stars{color:var(--blue);font-size:15px;letter-spacing:2px;margin-bottom:12px;}
-  .voice p{font-style:italic;font-family:var(--serif);font-size:var(--step-1);line-height:1.5;color:var(--text);}
+  .voice p{font-family:var(--sans);font-size:var(--step-1);line-height:1.55;color:var(--text);}
   .voice .who{margin-top:16px;font-size:13.5px;color:var(--text-faint);font-weight:600;}
 
   /* ===== FAQ ===== */
@@ -310,7 +337,7 @@
   .demo-flag{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ember-deep);background:rgba(193,98,46,.08);border:1px solid rgba(193,98,46,.22);border-radius:var(--radius-sm);padding:11px 14px;margin-bottom:18px;line-height:1.45;}
   .field{display:flex;flex-direction:column;gap:6px;margin-bottom:15px;}
   .field label{font-size:13px;font-weight:600;color:var(--text-soft);}
-  .field input,.field textarea,.field select{font-family:var(--sans);font-size:15px;color:var(--text);background:var(--cream);border:1.5px solid var(--line-l);border-radius:var(--radius-sm);padding:12px 14px;transition:border-color .2s var(--ease),box-shadow .2s var(--ease);width:100%;}
+  .field input,.field textarea,.field select{font-family:var(--sans);font-size:16px;color:var(--text);background:var(--cream);border:1.5px solid var(--line-l);border-radius:var(--radius-sm);padding:12px 14px;transition:border-color .2s var(--ease),box-shadow .2s var(--ease);width:100%;}
   .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--ember);box-shadow:var(--focus);}
   .field textarea{resize:vertical;min-height:96px;}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
@@ -318,7 +345,7 @@
   .form-msg{display:none;margin-top:14px;padding:14px 16px;border-radius:var(--radius-sm);font-size:var(--step-0);line-height:1.55;}
   .form-msg.ok{display:block;background:rgba(217,165,76,.16);border:1px solid rgba(217,165,76,.5);color:#6b4a1c;}
   .form-note{display:flex;align-items:flex-start;gap:8px;margin-top:14px;color:var(--text-faint);font-size:var(--step--1);}
-  .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;}
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;font-size:16px;}
 
   /* ===== Anfahrt ===== */
   .anfahrt-card{background:radial-gradient(120% 150% at 0% 0%,var(--ink-2),var(--ink) 65%);color:var(--bone);border-radius:var(--radius-lg);padding:clamp(28px,4.5vw,52px);box-shadow:var(--shadow-d);position:relative;overflow:hidden;}
@@ -336,13 +363,13 @@
   @media (min-width:781px){.site-footer{padding-bottom:40px;}}
   .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px;}
   .foot-brand .wm{font-size:21px;}
-  .foot-brand .tag{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--bone);margin-top:12px;}
+  .foot-brand .tag{font-family:var(--serif);font-weight:600;font-size:16px;color:var(--bone);margin-top:12px;letter-spacing:-.01em;}
   .foot-brand .addr{font-size:13.5px;color:var(--bone-faint);margin-top:14px;line-height:1.8;}
   .foot-col h3{font-family:var(--serif);font-size:14px;letter-spacing:.02em;color:var(--gold-soft);font-weight:600;margin-bottom:14px;}
   .foot-col a{display:block;color:var(--bone-dim);padding:5px 0;transition:color .2s var(--ease);font-size:14.5px;}
   .foot-col a:hover{color:#eef6fb;}
   .foot-bottom{margin-top:clamp(32px,5vw,48px);padding-top:22px;border-top:1px solid rgba(247,240,230,.14);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--bone-faint);}
-  .foot-bottom .hand{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold-soft);}
+  .foot-bottom .hand{font-family:var(--serif);font-weight:600;font-size:15px;color:var(--gold-soft);letter-spacing:-.01em;}
 
   /* ===== Sticky Mobil-Kontaktleiste ===== */
   .mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;display:none;grid-template-columns:1fr 1fr 1fr;
@@ -375,18 +402,23 @@
     .nav-links.open{transform:none;opacity:1;pointer-events:auto;}
     .nav-links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line-l);} .nav-links a:not(.btn)::after{display:none;}
     .nav-links .btn{margin-top:14px;justify-content:center;} .nav-toggle{display:block;}
-    .hero-grid{grid-template-columns:1fr;gap:clamp(26px,6vw,40px);}
-    .hero-inner{max-width:none;} .hero h1{max-width:18ch;}
-    .hero-figure{order:-1;max-width:340px;}
+    .hero-grid{grid-template-columns:1fr;gap:clamp(22px,5vw,34px);}
+    .hero-inner{max-width:none;order:0;} .hero h1{max-width:18ch;}
+    /* Fix 6: auf dem Handy zuerst Eyebrow+H1+CTA (Textpanel), DANN das Foto */
+    .hero-figure{order:1;max-width:min(340px,62vh);margin-top:0;justify-self:center;}
     .about-grid,.contact-grid,.anfahrt-grid{grid-template-columns:1fr;}
     .about-portrait{max-width:280px;margin-inline:auto;}
     .trust-grid{grid-template-columns:1fr 1fr;}
-    .svc-grid,.steps,.price-grid,.voices,.fitgrid{grid-template-columns:1fr;}
+    .steps,.price-grid,.voices,.fitgrid{grid-template-columns:1fr;}
+    .svc-grid{grid-template-columns:1fr 1fr;}
+    .svc-primary{grid-template-columns:1fr;}
+    .svc-primary .prim-media{max-width:340px;justify-self:start;aspect-ratio:16/11;}
     .einblicke{grid-template-columns:1fr 1fr;} .einblicke .tall{grid-row:span 1;grid-column:span 2;aspect-ratio:16/10;}
     .band-inner{max-width:none;} .band .band-line{max-width:26ch;}
   }
   @media (max-width:600px){
     .two{grid-template-columns:1fr;}
+    .svc-grid{grid-template-columns:1fr;}
     .einblicke{grid-template-columns:1fr;gap:11px;} .einblicke .tall{grid-column:span 1;aspect-ratio:4/5;}
     .einblicke figure{aspect-ratio:4/3;}
     .about-portrait{max-width:230px;}
@@ -445,14 +477,19 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
+    <!-- HERO — versetztes Panel + Atem-Wellen-Signatur -->
     <section class="hero">
+      <!-- fließende Atem-/Wellen-Signatur (dezent, blau) -->
+      <svg class="hero-wave" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0,150 C 180,90 300,90 480,140 C 660,190 780,190 960,140 C 1140,90 1260,90 1440,150" stroke="var(--blue)" stroke-width="2.5" opacity=".5"/>
+        <path d="M0,178 C 200,128 320,128 520,170 C 720,212 840,212 1040,170 C 1200,138 1320,138 1440,176" stroke="var(--blue)" stroke-width="1.6" opacity=".28"/>
+      </svg>
       <div class="wrap">
         <div class="hero-grid">
           <div class="hero-inner">
-            <span class="eyebrow">Hypnose · Breathwork · Coaching · Biel &amp; online</span>
-            <h1>Wandel beginnt mit <em>einem Atemzug.</em></h1>
-            <p class="hero-sub">Ich begleite dich mit Hypnose, Breathwork und herzzentriertem Coaching durch Umbruchphasen — einfühlsam, erfahren, seit 19 Jahren. Live in Biel oder bequem online.</p>
+            <span class="eyebrow">Breathwork · Hypnose · Coaching · Biel &amp; online</span>
+            <h1>Breathwork, das dich wieder <em>frei atmen</em> lässt.</h1>
+            <p class="hero-sub">Atemreisen als Herzstück meiner Arbeit — dazu Hypnose und herzzentriertes Coaching, wenn du gerade mitten im Umbruch stehst. Einfühlsam begleitet, seit 19 Jahren. Live in Biel oder bequem online.</p>
             <div class="hero-cta">
               <a class="btn" href="#kontakt">Kostenfreies Erstgespräch <span class="arr">→</span></a>
               <a class="btn btn-ghost" href="#leistungen">Angebote ansehen</a>
@@ -472,7 +509,7 @@
               </picture>
             </div>
             <div class="badge">
-              <img src="assets/logo-phoenix-96.png" width="34" alt="" aria-hidden="true">
+              <img src="assets/logo-phoenix-96.png" width="34" height="37" alt="" aria-hidden="true">
               <span><b>Shift Today</b>Deine Reise beginnt hier</span>
             </div>
           </div>
@@ -496,33 +533,50 @@
     <section class="light reveal" id="leistungen">
       <div class="wrap">
         <div class="sec-head">
-          <span class="eyebrow">Meine Angebote</span>
-          <h2>Drei Wege zu innerer Klarheit — einer davon passt zu dir.</h2>
-          <p>Ob Hypnose, Atemarbeit oder Coaching: Jede Methode setzt an einer anderen Stelle an. Im kostenfreien Erstgespräch finden wir gemeinsam heraus, was zu deinem Anliegen passt.</p>
+          <span class="eyebrow">Mein Herzstück</span>
+          <h2>Breathwork steht im Mittelpunkt — Hypnose und Coaching ergänzen deinen Weg.</h2>
+          <p>Der Atem ist mein wichtigstes Werkzeug. Rund um die Atemarbeit begleite ich dich bei Bedarf auch mit Hypnose und herzzentriertem Coaching. Im kostenfreien Erstgespräch finden wir gemeinsam heraus, was zu deinem Anliegen passt.</p>
         </div>
         <div class="svc-grid stagger">
+          <!-- PRIMÄR: Breathwork / Atemreisen -->
+          <article class="svc-primary">
+            <div>
+              <span class="tag">Breathwork · Atemreisen</span>
+              <h3>Wenn du dich wieder spüren willst.</h3>
+              <p>Breathwork nutzt gezielte Atemtechniken, um angestaute Anspannung zu lösen und Klarheit zu schaffen. Du entscheidest, in welchem Rahmen: ganz für dich in der Einzelsitzung, getragen in der Gruppe oder tief eintauchend auf einem mehrtägigen Retreat — live in Biel oder online.</p>
+              <ul class="prim-list">
+                <li>1:1-Atemreise</li>
+                <li>Kombi mit Hypnose</li>
+                <li>Gruppen-Journey</li>
+                <li>Mehrtägiges Retreat</li>
+                <li>Live &amp; online</li>
+              </ul>
+              <div class="prim-cta"><a class="btn" href="#kontakt">Atemreise anfragen <span class="arr">→</span></a></div>
+            </div>
+            <div class="prim-media">
+              <picture>
+                <source type="image/webp" srcset="assets/g-session-520.webp 520w, assets/g-session-760.webp 760w" sizes="(max-width:920px) 340px, 32vw">
+                <img src="assets/g-session-760.jpg" srcset="assets/g-session-520.jpg 520w, assets/g-session-760.jpg 760w" sizes="(max-width:920px) 340px, 32vw" width="1677" height="2097" alt="Nadya Seeberger begleitet eine Atem-Session in einem hellen Raum mit Kerzen und Blumen" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </article>
+          <!-- SEKUNDÄR: Hypnose · Coaching · HypnoBirthing -->
           <div class="svc">
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
             <h3>Wenn alte Muster dich festhalten</h3>
-            <p>Ängste, blockierende Glaubenssätze oder Erfahrungen, die einfach nicht loslassen wollen: In der Hypnose arbeiten wir direkt mit dem Unterbewusstsein — behutsam und in deinem Tempo, live in Biel oder online.</p>
+            <p>In der Hypnose arbeiten wir direkt mit dem Unterbewusstsein — behutsam, in deinem Tempo, bei Ängsten oder blockierenden Glaubenssätzen. Live in Biel oder online.</p>
             <span class="method">Hypnosetherapie · RTT</span>
-          </div>
-          <div class="svc">
-            <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-4 3-4 7 0 9s4 6 0 9M6 8c-2 2-2 5 0 7M18 8c2 2 2 5 0 7"/></svg></span>
-            <h3>Wenn du dich wieder spüren willst</h3>
-            <p>Breathwork nutzt gezielte Atemtechniken, um angestaute Anspannung zu lösen und Klarheit zu schaffen — als Einzelsitzung, in der Gruppe oder auf einem mehrtägigen Retreat.</p>
-            <span class="method">Breathwork · Atemreisen</span>
           </div>
           <div class="svc">
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 8.6c0 4.9-8.8 10.4-8.8 10.4S3.2 13.5 3.2 8.6a4.8 4.8 0 0 1 8.8-2.7 4.8 4.8 0 0 1 8.8 2.7z"/></svg></span>
             <h3>Wenn du eine klare Entscheidung suchst</h3>
-            <p>Herzzentriertes Coaching verbindet Kopf und Bauchgefühl: Wir arbeiten an dem, was dich beruflich oder persönlich weiterbringt — mit Struktur und Raum für das, was wirklich zählt.</p>
+            <p>Herzzentriertes Coaching verbindet Kopf und Bauchgefühl — für das, was dich beruflich oder persönlich weiterbringt, mit Struktur und Raum für das Wesentliche.</p>
             <span class="method">Herzzentriertes Coaching</span>
           </div>
           <div class="svc">
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9.5-9C.6 8 3 4 7 4c2 0 4 1.4 5 3 1-1.6 3-3 5-3 4 0 6.4 4 4.5 8-2.5 4.6-9.5 9-9.5 9z"/></svg></span>
             <h3>Wenn eine ruhige Geburt dein Wunsch ist</h3>
-            <p>Als offizielle HypnoBirthing-Kursleiterin (Schweiz) bereite ich werdende Eltern auf eine gelassenere Geburt vor: Atemtechniken, Schmerzmanagement, die Rolle des Partners und die „Safe Place"-Übung.</p>
+            <p>Als offizielle HypnoBirthing-Kursleiterin (Schweiz) begleite ich werdende Eltern mit Atemtechniken, Schmerzmanagement und der „Safe Place"-Übung.</p>
             <span class="method">HypnoBirthing-Kurs</span>
           </div>
         </div>
@@ -554,7 +608,7 @@
               <span>Mental Coach Berufskarriere</span>
             </div>
             <div class="sign">
-              <span class="wm" style="font-size:20px;"><img class="phoenix" src="assets/logo-phoenix-96.png" width="32" alt="" aria-hidden="true"></span>
+              <span class="wm" style="font-size:20px;"><img class="phoenix" src="assets/logo-phoenix-96.png" width="32" height="35" alt="" aria-hidden="true"></span>
               <span><span class="name">Nadya Seeberger</span><br><span class="role">Hypnose · Breathwork · Coaching · Biel</span></span>
             </div>
           </div>
@@ -684,7 +738,7 @@
             <p class="price-note">Ideal bei beruflichen oder persönlichen Entscheidungen.</p>
           </div>
         </div>
-        <p style="margin-top:var(--space-4);color:var(--text-faint);font-size:14px;">HypnoBirthing-Kurs und Retreats: Preise auf Anfrage im kostenfreien Erstgespräch — <span style="color:var(--ember-deep);">[KLÄREN: Kurspreis nicht auf Altseite gefunden, s. OFFENE-FRAGEN]</span>.</p>
+        <p style="margin-top:var(--space-4);color:var(--text-faint);font-size:14px;">HypnoBirthing-Kurs und Retreats: Preise auf Anfrage — gern im kostenfreien Erstgespräch.</p>
       </div>
     </section>
 
@@ -724,7 +778,7 @@
           <details><summary>Was passiert beim kostenfreien Erstgespräch?</summary><div class="a">Wir lernen uns in Ruhe kennen, du erzählst, worum es dir geht, und ich erkläre, wie ich arbeiten würde. Ganz unverbindlich — du entscheidest danach in deinem Tempo.</div></details>
           <details><summary>Findet die Sitzung live in Biel oder online statt?</summary><div class="a">Beides ist möglich. Live in meiner Praxis am Unteren Quai 31 in Biel, oder online per Zoom — auf Deutsch, Englisch oder Französisch.</div></details>
           <details><summary>Wie viele Sitzungen brauche ich?</summary><div class="a">Das ist individuell. Für viele Anliegen reicht eine Einzelsitzung, bei tiefliegenden Themen empfehle ich häufig ein 3er-Paket. Im Erstgespräch besprechen wir das gemeinsam.</div></details>
-          <details><summary>Übernimmt meine Krankenkasse die Kosten?</summary><div class="a">Meine Angebote sind Selbstzahler-Leistungen ausserhalb der Grundversicherung. <span style="color:var(--ember-deep);">[KLÄREN: mögliche Zusatzversicherungs-Anerkennung nicht auf Altseite dokumentiert]</span>.</div></details>
+          <details><summary>Übernimmt meine Krankenkasse die Kosten?</summary><div class="a">Meine Angebote sind Selbstzahler-Leistungen ausserhalb der Grundversicherung. Ob deine Zusatzversicherung einen Teil übernimmt, hängt von deiner Police ab — das schauen wir gern gemeinsam im kostenfreien Erstgespräch an.</div></details>
           <details><summary>Ist Hypnose dasselbe wie Show-Hypnose?</summary><div class="a">Nein. Es handelt sich um eine seriöse, therapeutisch orientierte Methode, die mit deinem Unterbewusstsein arbeitet — du bist dabei jederzeit ansprechbar und hast die Kontrolle.</div></details>
           <details><summary>Was ist, wenn es zwischen uns nicht passt?</summary><div class="a">Das kann vorkommen — und ist völlig in Ordnung. Sag es mir einfach offen, ich unterstütze dich gern bei der Suche nach einer passenderen Anlaufstelle.</div></details>
           <details><summary>Kann ich als (werdende) Mutter einen HypnoBirthing-Kurs besuchen?</summary><div class="a">Ja — ich bin offizielle HypnoBirthing-Kursleiterin (Schweiz) und begleite dich mit Atemtechniken, Schmerzmanagement und der „Safe Place"-Übung auf eine ruhigere Geburt vor.</div></details>
@@ -756,7 +810,7 @@
               <span><span class="lbl">Praxis</span><br><span class="val">Unterer Quai 31, 2502 Biel/Bienne</span></span>
             </div>
             <p class="promise">🕊️ Ich melde mich innerhalb von 24 Stunden persönlich bei dir zurück.</p>
-            <p class="notfall"><b>In akuten Krisen:</b> 144 (Rettung Schweiz) · Die Dargebotene Hand 143 · <span style="opacity:.85;">[KLÄREN: passt Notfall-Set für CH — Schweizer Nummern ergänzt statt DE-Nummern, s. OFFENE-FRAGEN]</span></p>
+            <p class="notfall"><b>In akuten Krisen:</b> 144 (Rettung Schweiz) · Die Dargebotene Hand 143 (kostenlos, rund um die Uhr)</p>
           </div>
 
           <div class="card">
@@ -825,7 +879,7 @@
     <div class="wrap">
       <div class="foot-top">
         <div class="foot-brand">
-          <span class="wm"><img class="phoenix" src="assets/logo-phoenix-96.png" width="34" alt="" aria-hidden="true"><span>Nadya Seeberger</span></span>
+          <span class="wm"><img class="phoenix" src="assets/logo-phoenix-96.png" width="34" height="37" alt="" aria-hidden="true"><span>Nadya Seeberger</span></span>
           <p class="tag">Wandel beginnt mit einem Atemzug.</p>
           <p class="addr">Nadya Seeberger · Unterer Quai 31, 2502 Biel/Bienne<br>shift@nadya-seeberger.com · +41 79 368 35 53</p>
         </div>
@@ -861,7 +915,8 @@
     var toggle=document.querySelector('.nav-toggle'),links=document.getElementById('nav-links');
     if(!toggle||!links)return;
     toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o?'true':'false');toggle.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen');});
-    links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');});});
+    function closeMenu(){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Menü öffnen');}
+    document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',closeMenu);});
   })();
   (function(){
     var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,els=document.querySelectorAll('.reveal');
